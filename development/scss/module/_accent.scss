@@ -1,0 +1,200 @@
+.el_accent_head {
+	background-color: $accent_color;
+	border-radius: 38px;
+	color: $sub_color;
+	display: inline-block;
+	height: 38px;
+	@include f_around(20 , 30 , false , false);
+	line-height: 38px;
+	text-align: center;
+	a {
+		color: $sub_color;
+	}
+}
+
+
+#plan {
+	.el_accent_head {
+		height: 82px;
+		@include f_around(35 , 52.5 , 700 , false);
+		@include maxmq(pc) {
+			font-size: rem(27);
+			height: 60px;
+			line-height: 60px;
+		}
+		@include maxmq(tab) {
+			font-size: rem(19);
+			height: 50px;
+			line-height: 50px;
+			width: 90%;
+		}
+		line-height: 82px;
+		overflow: hidden;
+		text-align: center;
+		width: 730px;
+		&:hover {
+			a {
+				background-color: #568932;
+				text-decoration: none;
+				transition: background-color .2s;
+			}
+		}
+	}
+
+	// 一番下
+	.el_accent_wrap {
+		position: relative;
+		text-align: center;
+		width: 100%;
+
+		.el_accent_head {
+			margin-top: 80px;
+		}
+
+		.el_headTree_first , .el_headTree_second {
+			position: absolute;
+			top: 50px;
+		}
+
+		.el_headTree_first {
+			@include maxmq(full) {
+				left: 1%;
+			}
+			left: -50px;
+		}
+		.el_headTree_second {
+			@include maxmq(full) {
+				right: 1%;
+			}
+			right: -50px;
+		}
+	}
+
+	.bl_strongBox_subBlock {
+		// PC時左側
+		.el_accent_head {
+			background-color: $accentSub_color;
+			height: 65px;
+			@include f_around(27 , 40.5 , 700 , false);
+			line-height: 65px;
+			position: relative;
+			width: 100%;
+		}
+	}
+
+	// PC時右側
+	.el_strongBox_btnWrap {
+		margin-top: 75px;
+	}
+
+	.el_accent_attention {
+		color: $accentSub_color;
+		display: block;
+		@include f_around(26 , false ,700 ,false);
+		margin-bottom: .5em;
+		text-align: center;
+		@media screen and (max-width: 1330px) {
+			font-size: rem(20);
+		}
+	}
+}
+
+#activety {
+	.el_accent_head {
+		height: 82px;
+		@include f_around(35 , 52.5 , 700 , false);
+		@include maxmq(pc) {
+			font-size: rem(27);
+			height: 60px;
+			line-height: 60px;
+		}
+		@include maxmq(tab) {
+			font-size: rem(19);
+			height: 50px;
+			line-height: 50px;
+			width: 90%;
+		}
+		line-height: 82px;
+		margin: 75px 0 ;
+		overflow: hidden;
+		text-align: center;
+		transition: background-color .2s;
+		width: 730px;
+		&:hover {
+			a {
+				background-color: #568932;
+				text-decoration: none;
+				transition: background-color .2s;
+			}
+		}
+	}
+	.el_accent_wrap {
+		margin: 0 auto;
+		max-width: 1120px;
+		position: relative;
+		text-align: center;
+	}
+
+	.el_headTree_first , .el_headTree_second {
+		position: absolute;
+		top: 20px;
+	}
+
+	.el_headTree_first {
+		left: 0;
+	}
+	.el_headTree_second {
+		right: 0;
+	}
+}
+
+#contact {
+	.el_accent_head {
+		height: 82px;
+		@include f_around(35 , 52.5 , 700 , false);
+		@include maxmq(pc) {
+			font-size: rem(27);
+			height: 60px;
+			line-height: 60px;
+		}
+		@include maxmq(tab) {
+			font-size: rem(19);
+			height: 50px;
+			line-height: 50px;
+			width: 90%;
+		}
+		line-height: 82px;
+		margin-top: 60px;
+		text-align: center;
+		transition: background-color .2s;
+		width: 550px;
+
+		&:hover {
+			background-color: #568932;
+			text-decoration: none;
+		}
+	}
+	.el_accent_wrap {
+		margin: 0 auto;
+		max-width: 1120px;
+		position: relative;
+		text-align: center;
+	}
+}
+
+.el_headTree_sp {
+	display: none;
+}
+@include maxmq(pc) {
+	.el_headTree_first , .el_headTree_second {
+		display: none;
+	}
+	.el_headTree_sp {
+		display: block;
+		margin: 0 auto;
+		width: 80%;
+		img {
+			width: 100%;
+		}
+	}
+}

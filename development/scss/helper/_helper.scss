@@ -1,0 +1,91 @@
+/* helperスタイル */
+/************************************************/
+// 余白クラス（for文で量産）
+$spaceClass: true !default;
+$spacePadding: false !default;
+$space_endValue: 15 !default;
+
+@if $spaceClass {
+	@for $i from 0 through $space_endValue {
+		.hp_mt#{$i * 10} {
+			margin-top: 10px * $i !important;
+		}
+		.hp_mb#{$i * 10} {
+			margin-bottom: 10px * $i !important;
+		}
+		@if $spacePadding {
+			.hp_pt#{$i * 10} {
+				padding-top: 10px * $i !important;
+			}
+			.hp_pb#{$i * 10} {
+				padding-bottom: 10px * $i !important;
+			}
+		}
+	}
+}
+
+.hp_mt1-4em {
+	margin-top: 1.4em;
+}
+.hp_mt1-5em {
+	margin-top: 1.5em;
+}
+.hp_mt2em {
+	margin-top: 1.5em;
+}
+
+// 背景色
+.hp_Bg {
+	background-color: $accentSub_color;
+}
+
+.hp_subBg {
+	background-color: $support_color;
+}
+
+// テキストカラー
+.hp_textw {
+	color: $sub_color;
+}
+
+.hp_strong {
+	color: #d32020;
+	font-weight: 700;
+}
+
+.hp_attention {
+	color: #d32020;
+}
+
+.hp_acentSub_color {
+	color: $accentSub_color;
+	font-weight: 700;
+}
+
+// flex_column
+.hp_flex_column {
+	flex-direction: column;
+}
+
+// 背景色
+.hp_bg_supportColor {
+	background-color: $support_color;
+}
+.hp_bg_subColor {
+	background-color: $accentSub_color;
+}
+.hp_bg_accentColor {
+	background-color: $accent_color;
+}
+
+.hp_w850 {
+	margin: 50px auto 0;
+	max-width: 850px;
+}
+
+// スマホ改行削除
+.hp_br_notsp {
+	@include maxmq(tab) {
+		display: none;
+	}
+}

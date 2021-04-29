@@ -1,0 +1,101 @@
+/* 共通モジュールのスタイル */
+/************************************************/
+.el_section_title {
+	color: $accent_color;
+	@include l_height(18 , 27);
+	position: relative;
+	text-align: center;
+
+	&::after {
+		display: block;
+		@include f_around(45 , 45 , 700 , false);
+		text-transform: capitalize;
+	}
+}
+
+.el_title_treeFirst , .el_title_treeSecond {
+	position: absolute;
+}
+.el_title_treeFirst {
+	left: 175px;
+	top: 55px;
+}
+.el_title_treeSecond {
+	right: 150px;
+	top: 50px;
+}
+
+.el_section_concept {
+	padding-top: 80px;
+}
+.el_section_concept::after {
+	content: "concept";
+}
+
+.el_section_service::after {
+	content: "service";
+}
+.el_section_plan::after {
+	content: "plan";
+}
+.el_section_activety::after {
+	content: "activety";
+}
+.el_section_information::after {
+	content: "information";
+}
+.el_section_faq::after {
+	content: "faq";
+	text-transform: uppercase;
+}
+.el_section_contact::after {
+	content: "contact";
+}
+
+// service
+.el_section_service {
+	margin: 0 auto;
+	margin-top: 80px;
+	max-width: 1250px;
+
+	&::before {
+		content: url(../../assets/img/symbol/service/humans.svg);
+		@include maxmq(full) {
+			right: 20px;
+		}
+		position: absolute;
+		right: -30px;
+		top: -30px;
+	}
+}
+
+.el_section_subTitle {
+	margin-top: 80px;
+	text-align: center;
+}
+
+// Plan
+.el_section_plan {
+	margin: 0 auto;
+	padding-top: 80px;
+}
+
+// activety
+.el_section_activety {
+	padding-top: 80px;
+}
+
+// information
+.el_section_information {
+	padding-top: 68px;
+}
+
+// faq
+.el_section_faq {
+	padding-top: 95px;
+}
+
+// contact
+.el_section_contact {
+	padding-top: 80px;
+}

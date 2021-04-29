@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* base */
+/************************************************/
+body {
+	color: $base_color;
+	font-family: $fontFamily;
+	font-size: rem(20);
+	font-weight: 400;
+	overflow-x: hidden;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: bottom;
+}
+
+a {
+	display: block;
+	img {
+		cursor: inherit;
+	}
+}
+
+a:hover {
+	cursor: pointer;
+}

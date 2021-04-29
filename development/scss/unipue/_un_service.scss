@@ -1,0 +1,142 @@
+/* service */
+.un_service_text {
+	color: $accentSub_color;
+	margin-top: 38px;
+	text-align: center;
+}
+
+.un_point_contaier {
+	@include maxmq(full) {
+		padding: 0 10px 80px;
+	}
+	margin-top: -17px;
+	padding-bottom: 80px;
+}
+
+.un_point_block {
+	display: flex;
+	@include maxmq(pc) {
+		flex-direction: column;
+	}
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 1250px;
+}
+
+.un_point_list {
+	flex-shrink: 0;
+
+	a {
+		display: block;
+	}
+}
+
+.un_point_sub {
+	transition: background-color .2s , color .2s;
+}
+
+.un_point_list:first-of-type {
+	@include maxmq(full) {
+		margin-left: 0;
+		width: 32.5%;
+	}
+	margin-left: 25px;
+	width: 390px;
+
+	.un_point_aboutWrap {
+		margin-left: 15px;
+	}
+
+	.un_point_sub:hover {
+		background-color: #568932;
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.un_point_sub::after {
+		content: "▶︎";
+		left: 9.3em;
+		position: absolute;
+		top: 0;
+	}
+}
+
+.un_point_list:nth-of-type(2) {
+	@include maxmq(full) {
+		margin-left: 0;
+		width: 31.2%;
+	}
+	margin-left: 30px;
+	width: 378px;
+
+	.un_point_sub {
+		background-color: $sub_color;
+		border: 2px solid $accentSub_color;
+		line-height: 34px;
+		transition: background-color .2s;
+		z-index: 2;
+
+		a {
+			color: $accentSub_color;
+		}
+
+		&::after {
+			color: $accentSub_color;
+			content: "▼";
+			left: 8.6em;
+			position: absolute;
+			top: 0;
+		}
+
+		&:hover {
+			background-color: #70a24d;
+			cursor: pointer;
+
+			a {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.un_point_sub:hover::after {
+		color: #fff;
+	}
+}
+
+.un_point_list:last-of-type {
+	@include maxmq(full) {
+		margin-left: 0;
+		width: 35.4%;
+	}
+	margin-left: 15px;
+	width: 413px;
+
+	.un_point_aboutWrap {
+		margin-left: -35px;
+	}
+}
+
+.un_point_aboutWrap {
+	text-align: center;
+	width: 100%;
+
+	.un_point_head {
+		height: 52px;
+		@include f_around(27 , 4.05 , false , false);
+		line-height: 52px;
+		padding: 0 1.2em;
+	}
+
+	.un_point_sub {
+		margin-top: 10px;
+		position: relative;
+		width: 242px;
+	}
+}
+
+.un_point_text {
+	color: $accentSub_color;
+	margin-top: 12px;
+}

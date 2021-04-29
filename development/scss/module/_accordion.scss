@@ -1,0 +1,84 @@
+// *************************
+/* bl_accordion */
+.bl_accordion_block {
+	color: $sub_color;
+	@include maxmq(full) {
+		padding: 0 20px 80px;
+	}
+	margin: 95px auto 0;
+	max-width: 1227px;
+	padding-bottom: 80px;
+}
+
+.bl_accordion_menu {
+	background: $accent_color;
+	border-radius: 10px;
+	@include f_around(30 , false ,700 ,false);
+	margin-bottom: 10px;
+	padding: .5em 1em;
+}
+
+.el_accordion_btn {
+	display: flex;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	&::before {
+		content: "Q.";
+	}
+}
+
+.el_accordion_icon {
+	display: inline-block;
+	height: 41px;
+	width: 41px;
+
+	&::before {
+		background: #fff;
+		content: "";
+		height: 4px;
+		position: absolute;
+		right: 7px;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: background-color .3s;
+		width: 41px;
+	}
+	&::after {
+		background: #fff;
+		content: "";
+		height: 41px;
+		position: absolute;
+		right: 27px;
+		top: 50%;
+		transform: translateY(-50%);
+		transition: transform .3s;
+		width: 4px;
+	}
+}
+
+.el_accordion_icon.is_open::after {
+	background-color: transparent;
+	content: "";
+	display: inline-block;
+	height: 14px;
+	transform: rotate(225deg);
+	width: 14px;
+}
+
+.bl_accordion_innerMenu {
+	font-weight: 400;
+	@include f_around(25 , 31 , 700 ,false);
+	padding: 20px 50px 30px;
+
+	&::before {
+		content: "A.";
+		margin-right: .3em;
+		vertical-align: top;
+	}
+
+	.el_accordion_innertext {
+		display: inline-block;
+		width: 90%;
+	}
+}

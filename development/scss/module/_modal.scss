@@ -1,0 +1,97 @@
+.bl_overlay {
+	background-color: rgba(0, 0, 0, .7);
+	display: none;
+	height: 100%;
+	@include z-index(overlay);
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.bl_overlay:hover {
+	cursor: pointer;
+}
+
+.bl_modal_window {
+	background-image: url(../../assets/img/photo/modal/modal_bg.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: none;
+	height: 703px;
+	@include z-index(modal);
+	@include maxmq(pc) {
+		background-size: cover;
+		height: 70vh;
+		width: 90%;
+	}
+	left: 50%;
+	position: fixed;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 872px;
+}
+
+.el_modal_bg {
+	height: 100%;
+	@include maxmq(tab) {
+		height: auto;
+	}
+	width: 100%;
+}
+
+.bl_modal_windowInner {
+	align-items: center;
+	display: flex;
+	@include z-index(modalInnre);
+	justify-content: space-between;
+	padding: 70px 60px 40px 50px;
+}
+
+.bl_modal_text {
+	color: $sub_color;
+	@include f_around(15 , 22.5 ,false ,false);
+	margin-top: 40px;
+}
+
+.el_modal_textWrap {
+	margin-top: 1.5em;
+}
+
+.el_button_close {
+	position: absolute;
+	right: 65px;
+	top: 35px;
+}
+
+.el_button_close:hover img {
+	cursor: pointer;
+}
+
+.bl_modal_innerBlock {
+	width: 60%;
+}
+
+.el_modal_tree {
+	flex-shrink: 0;
+	width: 90px;
+	img {
+		height: 100%;
+	}
+}
+
+// カルーセルスライダークリック時
+.bl_modal_slide {
+	display: none;
+	// height: 50vh;
+	@include z-index(modal);
+	left: 50%;
+	position: fixed;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 50vw;
+
+	img {
+		width: 100%;
+	}
+}

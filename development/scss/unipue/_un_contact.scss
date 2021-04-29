@@ -1,0 +1,13 @@
+/* contact */
+.un_section_read {
+	color: $accent_color;
+	@include f_around(20 , 27 ,700 , false);
+	margin-top: 35px;
+	text-align: center;
+}
+
+.un_contact_link {
+	color: $accent_color;
+	display: inline-block;
+	text-decoration: underline;
+}

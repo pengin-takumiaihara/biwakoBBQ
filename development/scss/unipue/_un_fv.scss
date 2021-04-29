@@ -1,0 +1,45 @@
+/* fv */
+.un_fv_container {
+	@include maxmq(full) {
+		top: 45%;
+		transform: translate(-50% , -50%);
+	}
+	left: 51%;
+	position: absolute;
+	top: 11vw;
+	transform: translateX(-50%);
+}
+
+.un_fv_copy {
+	@include maxmq(tab) {
+		width: 80%;
+	}
+	width: 685px;
+	img {
+		width: 100%;
+	}
+}
+
+.un_fv_text {
+	@include f_around(27 , 55, 700 , false);
+	margin-top: 45px;
+	text-align: center;
+}
+
+.un_fv_contactContainer {
+	text-align: center;
+}
+.un_fv_contact {
+	background-color: $accentSub_color;
+	color: $sub_color;
+	display: inline-block;
+	@include f_around(35 , 45 , 700 , false);
+	margin-top: 36px;
+	padding: .5em 1.5em;
+	transition: background-color .2s;
+
+	&:hover {
+		background-color: #568932;
+		text-decoration: none;
+	}
+}

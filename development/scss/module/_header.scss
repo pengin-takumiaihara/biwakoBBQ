@@ -1,0 +1,73 @@
+.ly_header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.ly_header_inner {
+	align-items: center;
+	display: flex;
+	@include maxmq(full) {
+		padding: 20px;
+	}
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 1330px;
+	padding: 20px 0;
+	width: 100%;
+}
+
+.bl_header_block {
+	align-items: center;
+	display: flex;
+}
+
+// ロゴ
+.el_logo {
+	margin-left: -25px;
+	margin-top: 10px;
+}
+
+.el_header_list:not(:first-of-type) {
+	@include maxmq(full) {
+		margin-left: 28px;
+	}
+	margin-left: 35px;
+}
+
+.el_header_list:nth-last-of-type(2) {
+	@include maxmq(full) {
+		margin-left: 25px;
+		width: 135px;
+		img {
+			width: 100%;
+		}
+	}
+	margin-left: 43px;
+}
+.el_header_list:last-of-type {
+	@include maxmq(full) {
+		width: 175px;
+		img {
+			width: 100%;
+		}
+	}
+	margin-left: 10px;
+}
+
+.el_header_list {
+	font-family: robot;
+	font-size: rem(14);
+
+	a {
+		color: #000;
+		display: block;
+		font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+		font-weight: 700;
+		width: 100%;
+	}
+}
+
+.el_header_list:hover a img {
+	cursor: pointer;
+}

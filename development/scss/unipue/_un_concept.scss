@@ -1,0 +1,23 @@
+/* concept */
+.un_concept_textWrap {
+	color: $sub_color;
+}
+
+.un_concept_textWrap {
+	@include l_height(20 , 30);
+	margin: 0 auto;
+	margin-top: 50px;
+	max-width: 800px;
+	text-align: center;
+}
+.un_concept_textBlock:not(:first-of-type) {
+	margin-top: 1.5em;
+}
+
+.un_concept_bottomBg {
+	background-image: url(../../assets/img/symbol/concept/bg_green.png);
+	background-size: cover;
+	display: block;
+	height: 135.38px;
+	margin-top: 2.5em;
+}

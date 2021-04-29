@@ -1,0 +1,35 @@
+.bl_footer_list {
+	display: flex;
+	flex-basis: 625px;
+	flex-wrap: wrap;
+	font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	@include f_around(22.67 , 26.56 , 700 , false);
+
+	&:last-of-type {
+		margin-top: 16px;
+	}
+	li:not(:first-of-type) {
+		margin-left: 80px;
+	}
+	a {
+		color: $sub_color;
+	}
+}
+
+.el_footer_banner {
+	flex-basis: 529px;
+	transition: opacity .2s;
+
+	&:hover {
+		opacity: .8;
+	}
+}
+
+
+.el_footer_copy {
+	background-color: #fff;
+	color: $accentSub_color;
+	@include f_around(17 , 25.5 , 700 , false);
+	padding-top: .8em;
+	text-align: center;
+}

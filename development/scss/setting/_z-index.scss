@@ -1,0 +1,10 @@
+// z-index
+$layer: (
+    modalInner : 300,
+    modal : 200,
+    overlay : 100,
+    hamburgerIcon : 30,
+    default : 1
+);
+// 呼び出し時
+// @include z-index(modal);

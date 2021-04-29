@@ -1,0 +1,138 @@
+/* activety */
+.un_activety_read {
+	color: $sub_color;
+	@include f_around(20 , 26 , 400 , false);
+	margin-top: 80px;
+	text-align: center;
+}
+
+.un_activety_readBottom {
+	margin-top: 1.5em;
+}
+
+.un_activety_textBox {
+	background-color: $sub_color;
+	color: $accent_color;
+	margin: 40px auto 0;
+	max-width: 1010px;
+	padding: 1.2em 1.2em .9em 1.2em;
+	text-align: center;
+}
+
+.un_activety_strong {
+	@include f_around(27 , 43 , 700 , false);
+}
+
+.un_activety_commentBox {
+	color: $sub_color;
+	text-align: center;
+}
+
+.un_activety_list {
+	display: inline-block;
+	@include f_around(17 , 20 , 500 , false);
+	margin-top: 20px;
+	text-align: left;
+}
+
+.un_activety_main {
+	@include maxmq(pc) {
+		padding: 0 20px;
+	}
+	@include maxmq(tab) {
+		padding: 0;
+		width: 80%;
+	}
+	margin: 0 auto;
+	margin-top: 55px;
+	max-width: 1050px;
+}
+
+.un_activety_mainContainer {
+	align-items: flex-start;
+	display: flex;
+	@include maxmq(tab) {
+		flex-direction: column;
+	}
+	justify-content: space-between;
+
+	&:not(:first-of-type) {
+		margin-top: 50px;
+	}
+}
+
+.un_activety_imgContainer {
+	flex-basis: 500PX;
+	flex-shrink: 0;
+	@include maxmq(pc) {
+		flex-basis: 50%;
+		flex-shrink: 1;
+	}
+	@include maxmq(tab) {
+		flex-basis: 100%;
+	}
+}
+
+.un_activety_descriptionContainer {
+	background-color: $sub_color;
+	border-radius: 10px 10px 10px 10px;
+	flex-basis: 477px;
+	flex-shrink: 0;
+	@include maxmq(pc) {
+		flex-basis: 47%;
+		flex-shrink: 1;
+	}
+	@include maxmq(tab) {
+		flex-basis: 100%;
+	}
+}
+
+.un_activety_descriptiontitle {
+	background-color: $accent_color;
+	border-radius: 10px 10px 0 0;
+	color: $sub_color;
+	padding: .5em 0;
+	text-align: center;
+}
+
+.un_activety_descriptionbox {
+	color: $accent_color;
+	font-weight: 700;
+	padding: 30px 30px 30px 25px;;
+}
+
+.un_activety_descriptionPrice {
+	background-color: $accent_color;
+	color: $sub_color;
+	display: inline-block;
+	margin-top: 29px;
+	padding: .3em 1em;
+}
+
+.un_activety_descriptionList {
+	margin-top: 21px;
+}
+
+.un_activety_descriptionBottomWrap {
+	align-items: flex-end;
+	display: flex;
+	justify-content: space-between;
+}
+.un_activety_descriptionLink {
+	align-items: flex-start;
+	display: flex;
+	img {
+		padding-left: .5em;
+	}
+
+	&::after {
+		content: url(../../assets/img/symbol/activety/link_btn.svg);
+		display: inline-block;
+		height: 1em;
+		margin-left: .5em;
+		width: 1em;
+	}
+	&:hover {
+		text-decoration: underline;
+	}
+}

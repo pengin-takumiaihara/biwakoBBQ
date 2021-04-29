@@ -1,0 +1,147 @@
+// レスポンシブwidth設定
+// スマホ基準(〜以上)
+@mixin minmq($breakpoint: sp) {
+	@media screen and (min-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+		@content;
+	}
+}
+
+// PC基準(〜未満)
+@mixin maxmq($breakpoint: sp) {
+	@media screen and (max-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+		@content;
+	}
+}
+
+// ***************************************************
+
+
+// z-index
+@mixin z-index($key) {
+	z-index: map-get($layer, $key);
+}
+// ***************************************************
+
+
+// ブラウザCSSハック
+// IE11
+@mixin hack_IE11 {
+	@at-root {
+		_:-ms-lang(x)::-ms-backdrop , & {
+			@content;
+		}
+	}
+}
+
+// Edge(EdgeHTML)
+@mixin hack_Edge {
+	@at-root {
+		_:-ms-lang(x)::backdrop , & {
+			@content;
+		}
+	}
+}
+
+//  Edge(Chromium)
+@mixin hack_EdgeChromium {
+	@at-root {
+		_:lang(x)::-ms- , & {
+			@content;
+		}
+	}
+}
+
+// Chrome
+@mixin hack_Chrome {
+	@at-root {
+		_:lang(x)::-internal-media-controls-overlay-cast-button , & {
+			@content;
+		}
+	}
+}
+
+// Safari
+@mixin hack_Safari {
+	@at-root {
+		_:lang(x) + _:-webkit-full-screen-document , & {
+			@content;
+		}
+	}
+}
+
+// Firefox
+@mixin hack_Firefox {
+	@at-root {
+		_:lang(x)::-moz-placeholder , & {
+			@content;
+		}
+	}
+}
+// ***************************************************
+
+
+// font-size,line-height,font-weight,letter-spacing
+@mixin f_around($pixels, $height: false, $weight: false , $spacing: false) {
+	font-size: #{rem($pixels)};
+	@if $weight {
+		font-weight: $weight;
+	}
+
+	@if $height {
+		line-height: $height / $pixels;
+	}
+
+	@if $spacing {
+		letter-spacing: ($spacing / 1000) * 1em;
+	}
+}
+// 呼び出し時
+// include f_around(フォントサイズ, 行高 , 太さ, トラッキング)
+// ***************************************************
+
+// line-height
+@mixin l_height($pixels , $height) {
+	font-size: #{rem($pixels)};
+	line-height: $height / $pixels;
+}
+
+// letter-spacing
+@mixin l_spacing($spacing) {
+	letter-spacing: ($spacing / 1000 ) + em;
+}
+// ***************************************************
+
+// くの字矢印
+@mixin arrow($width, $bold, $color, $deg) {
+	border-color: $color;
+	border-style: solid;
+	border-width: 0 #{$bold}px #{$bold}px 0;
+	content: "";
+	display: inline-block;
+	height: #{$width}px;
+	//IE11対策
+	@include hack_IE11 {
+		margin-bottom: 1px !important;
+	}
+	vertical-align: middle;
+	width: #{$width}px;
+	//角度
+	@if ($deg == "left") {
+		transform: rotate(135deg);
+	}
+
+	@else if ($deg == "top") {
+		transform: rotate(225deg);
+	}
+
+	@else if ($deg == "right") {
+		transform: rotate(-45deg);
+	}
+
+	@else if ($deg == "bottom") {
+		transform: rotate(45deg);
+	}
+}
+// 呼び出し時
+// @include arrow(大きさ , 線の太さ , 色 , 向き(left,top.right,bottom));
+// ***************************************************

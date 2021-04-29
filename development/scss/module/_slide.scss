@@ -1,0 +1,37 @@
+/*swiper setting*/
+.bl_slide_container {
+	margin: 28px auto 0;
+	max-width: 1130px;
+}
+
+.swiper-button-prev , .swiper-button-next {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: none; /* デフォルトのボタン画像を消す */
+	border: none;
+	height: 38px;
+	margin-top: 1px;
+	padding: 0;
+	width: 38px;
+	z-index: 100;
+}
+
+.swiper-button-prev img:hover , .swiper-button-next img:hover {
+	cursor: pointer;
+}
+
+// ボタン配置のためのswiper外コンテナ
+.bl_slide_relative {
+	@include maxmq(pc) {
+		max-width: 1000px;
+	}
+	margin: 0 auto;
+	max-width: 1250px;
+	overflow: hidden;
+	position: relative;
+}
+
+.el_slide_img:hover img {
+	cursor: pointer;
+}

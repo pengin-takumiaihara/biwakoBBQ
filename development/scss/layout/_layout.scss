@@ -1,0 +1,99 @@
+/* layoutModule */
+/************************************************/
+.ly_concept {
+	position: relative;
+}
+
+.ly_fv {
+	background-image: url(../../assets/img/symbol/fv/fv_bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 0;
+	@include maxmq(full) {
+		height: 812.5px;
+	}
+	padding-bottom: calc(812.5 / 1440 *100%);
+}
+
+// concept
+.ly_concept {
+	position: relative;
+}
+
+.ly_concept_inner {
+	margin: 0 auto;
+	max-width: 1162px;
+	position: relative;
+}
+.ly_concept_treeFirst , .ly_concept_treeSecond {
+	position: absolute;
+}
+
+.ly_concept_treeFirst {
+	@include maxmq(full) {
+		left: 10px;
+	}
+	left: 5px;
+	top: 118px;
+}
+.ly_concept_treeSecond {
+	@include maxmq(full) {
+		right: 10px;
+	}
+	right: -10px;
+	top: 105px;
+}
+
+// plan
+.ly_plan_inner {
+	margin: 0 auto;
+	max-width: 1145px;
+	padding-bottom: 50px;
+	position: relative;
+}
+
+// activety
+.ly_activety_titleWrap {
+	margin: 0 auto;
+	max-width: 1210px;
+	position: relative;
+}
+
+.ly_activety_man , .ly_activety_woman , .ly_activety_treeFirst , .ly_activety_treeSecond {
+	position: absolute;
+}
+
+.ly_activety_man {
+	left: 27.5%;
+	top: 47px;
+}
+
+.ly_activety_woman {
+	right: 27.5%;
+	top: 47px;
+}
+
+.ly_activety_treeFirst {
+	left: -10px;
+	top: 80px;
+}
+
+.ly_activety_treeSecond {
+	right: 10px;
+	top: 75px;
+}
+
+// faq
+.ly_faq_inner {
+	position: relative;
+}
+
+// footer
+.ly_footer_wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 1211px;
+	padding: 51px 0;
+}
