@@ -13,6 +13,13 @@ $(function () {
   });
 
   // ***************************
+  // ハンバーガーメニュー
+  $('.js_headerBtn').on('click', function () {
+    $('.el_headerBtn_line').toggleClass('is_open');
+  })
+
+
+  // ***************************
   // スライダー
   $('.js_slide_img').on('click', function () {
     $(this).addClass('is_click');
