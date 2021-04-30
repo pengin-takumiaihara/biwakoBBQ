@@ -504,7 +504,7 @@ a:hover {
     border-radius: 2px;
     display: block;
     height: 4px;
-    width: 31px;
+    width: 35px;
   }
   .el_headerBtn_line::before, .el_headerBtn_line::after {
     background-color: #fff;
