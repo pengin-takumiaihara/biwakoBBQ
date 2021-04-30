@@ -402,6 +402,12 @@ a:hover {
   width: 100%;
 }
 
+@media screen and (max-width: 1100px) {
+  .ly_header_inner {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1439px) {
   .ly_header_inner {
     padding: 20px;
@@ -463,13 +469,77 @@ a:hover {
 .el_header_list a {
   color: #000;
   display: block;
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "is_open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   width: 100%;
 }
 
 .el_header_list:hover a img {
   cursor: pointer;
+}
+
+.el_headerBtn {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .el_headerBtn {
+    align-items: center;
+    background-color: #70a24d;
+    border-radius: 50%;
+    display: flex;
+    height: 57px;
+    z-index: 30;
+    justify-content: center;
+    position: fixed;
+    right: 15px;
+    top: 17px;
+    width: 57px;
+  }
+  .el_headerBtn:hover {
+    cursor: pointer;
+  }
+  .el_headerBtn_line {
+    background-color: #fff;
+    display: block;
+    height: 4px;
+    width: 27px;
+  }
+  .el_headerBtn_line::before, .el_headerBtn_line::after {
+    background-color: #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+    width: 100%;
+  }
+  .el_headerBtn_line::before {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  .el_headerBtn_line::after {
+    -webkit-transform: translateY(6px);
+            transform: translateY(6px);
+  }
+  .el_headerBtn_line.is_open {
+    background-color: transparent;
+  }
+  .el_headerBtn_line.is_open::before, .el_headerBtn_line.is_open::after {
+    content: "";
+  }
+  .el_headerBtn_line.is_open::before {
+    -webkit-transform: rotate(45deg) translate(2px, 0);
+            transform: rotate(45deg) translate(2px, 0);
+  }
+  .el_headerBtn_line.is_open::after {
+    -webkit-transform: rotate(-45deg) translate(2px, -2px);
+            transform: rotate(-45deg) translate(2px, -2px);
+  }
+  .el_headerBtn_line:hover {
+    cursor: pointer;
+  }
 }
 
 .bl_strongBox {
