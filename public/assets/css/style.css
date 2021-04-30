@@ -501,12 +501,14 @@ a:hover {
   }
   .el_headerBtn_line {
     background-color: #fff;
+    border-radius: 2px;
     display: block;
     height: 4px;
-    width: 27px;
+    width: 31px;
   }
   .el_headerBtn_line::before, .el_headerBtn_line::after {
     background-color: #fff;
+    border-radius: 2px;
     content: "";
     display: block;
     height: 100%;

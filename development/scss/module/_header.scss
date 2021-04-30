@@ -103,13 +103,15 @@
 	// 真ん中
 	.el_headerBtn_line {
 		background-color: $sub_color;
+		border-radius: 2px;
 		display: block;
 		height: 4px;
-		width: 27px;
+		width: 31px;
 
 		// 上下
 		&::before , &::after {
 			background-color: $sub_color;
+			border-radius: 2px;
 			content: "";
 			display: block;
 			height: 100%;
