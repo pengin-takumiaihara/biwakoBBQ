@@ -37,9 +37,16 @@ a:hover {
   background-image: url(../../assets/img/symbol/fv/fv_bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 0;
   padding-bottom: calc(812.5 / 1440 *100%);
+}
+
+@media screen and (max-width: 780px) {
+  .ly_fv {
+    background-image: url(../../assets/img/symbol/fv/fv_bgSP.jpg);
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 1439px) {
@@ -60,6 +67,13 @@ a:hover {
 
 .ly_concept_treeFirst, .ly_concept_treeSecond {
   position: absolute;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1185px) {
+  .ly_concept_treeFirst, .ly_concept_treeSecond {
+    display: none;
+  }
 }
 
 .ly_concept_treeFirst {
