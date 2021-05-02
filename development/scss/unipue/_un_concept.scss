@@ -3,6 +3,9 @@
 	@include maxmq(pc) {
 		justify-content: space-between;
 	}
+	@include maxmq(sp) {
+		padding-top: 60px;
+	}
 	justify-content: center;
 	padding-top: 80px;
 }

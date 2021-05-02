@@ -274,6 +274,7 @@ a:hover {
   margin: 0 auto;
   margin-top: 80px;
   max-width: 1250px;
+  text-align: center;
 }
 
 .el_section_service::before {
@@ -286,6 +287,27 @@ a:hover {
 @media screen and (max-width: 1439px) {
   .el_section_service::before {
     right: 20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .el_section_service::before {
+    background-image: url(../../assets/img/symbol/service/humans.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 150px;
+    top: -50px;
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 1100px) and (max-width: 480px) {
+  .el_section_service::before {
+    height: 82px;
+    top: -20px;
+    width: 55px;
   }
 }
 
@@ -306,12 +328,39 @@ a:hover {
   padding-top: 68px;
 }
 
+@media screen and (max-width: 480px) {
+  .el_section_information {
+    padding-top: 0;
+  }
+}
+
 .un_faq_titleWrap {
   padding-top: 95px;
 }
 
 .el_section_contact {
   padding-top: 80px;
+}
+
+@media screen and (max-width: 480px) {
+  .el_section_contact {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .el_section_title {
+    margin-top: 60px;
+  }
+  .el_section_activety {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .el_section_concept, .el_section_plan, .el_section_faq {
+    margin-top: 0;
+  }
 }
 
 .el_nav_link {
@@ -1871,6 +1920,12 @@ table {
 @media screen and (max-width: 1100px) {
   .un_concept_titleWrap {
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .un_concept_titleWrap {
+    padding-top: 60px;
   }
 }
 

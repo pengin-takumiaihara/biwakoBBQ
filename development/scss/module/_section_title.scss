@@ -38,7 +38,6 @@
 		}
 	}
 	@include maxmq(tab) {
-		// width: 100px;
 		width: 18vw;
 	}
 	@include maxmq(sp) {
@@ -74,11 +73,26 @@
 	margin: 0 auto;
 	margin-top: 80px;
 	max-width: 1250px;
-
+	text-align: center;
 	&::before {
 		content: url(../../assets/img/symbol/service/humans.svg);
 		@include maxmq(full) {
 			right: 20px;
+		}
+		@include maxmq(pc) {
+			background-image: url(../../assets/img/symbol/service/humans.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: "";
+			height: 150px;
+			@include maxmq(sp) {
+				height: 82px;
+				top: -20px;
+				width: 55px;
+			}
+			top: -50px;
+			width: 120px;
 		}
 		position: absolute;
 		right: -30px;
@@ -103,6 +117,9 @@
 
 // information
 .el_section_information {
+	@include maxmq(sp) {
+		padding-top: 0;
+	}
 	padding-top: 68px;
 }
 
@@ -113,5 +130,22 @@
 
 // contact
 .el_section_contact {
+	@include maxmq(sp) {
+		padding-top: 0;
+	}
 	padding-top: 80px;
+}
+
+@include maxmq(sp) {
+	.el_section_title {
+		margin-top: 60px;
+	}
+	.el_section_activety {
+		margin-top: 0;
+	}
+}
+.el_section_concept , .el_section_plan , .el_section_faq {
+	@include maxmq(sp) {
+		margin-top: 0;
+	}
 }
