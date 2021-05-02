@@ -1,19 +1,34 @@
 /* fv */
 .un_fv_container {
 	@include maxmq(full) {
-		top: 45%;
+		top: 20vh;
+	}
+	@include maxmq(pc) {
+		top: 15vh;
+		width: 70%;
+	}
+	@include maxmq(tab) {
+		top: 50%;
 		transform: translate(-50% , -50%);
+		width: 80%;
+	}
+	@include maxmq(sp) {
+		padding: 0 20px;
+		top: 40%;
+		width: 100%;
 	}
 	left: 51%;
 	position: absolute;
 	top: 11vw;
 	transform: translateX(-50%);
+	width: 800px;
 }
 
 .un_fv_copy {
-	@include maxmq(tab) {
-		width: 80%;
+	@include maxmq(pc) {
+		width: 100%;
 	}
+	margin: 0 auto;
 	width: 685px;
 	img {
 		width: 100%;
@@ -22,12 +37,28 @@
 
 .un_fv_text {
 	@include f_around(27 , 55, 700 , false);
+	@include maxmq(tab) {
+		font-size: 3.5vw;
+	}
+	@include maxmq(sp) {
+		@include f_around(15 , 30, 700 , false);
+		margin-top: 20px;
+	}
 	margin-top: 45px;
 	text-align: center;
 }
 
 .un_fv_contactContainer {
 	text-align: center;
+	a {
+		@include maxmq(tab) {
+			font-size: 3.5vw;
+		}
+		@include maxmq(sp) {
+			font-size: rem(16);
+			margin-top: 20px;
+		}
+	}
 }
 .un_fv_contact {
 	background-color: $accentSub_color;

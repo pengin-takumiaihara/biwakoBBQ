@@ -83,9 +83,31 @@ $space_endValue: 15 !default;
 	max-width: 850px;
 }
 
-// スマホ改行削除
-.hp_br_notsp {
+// //////////////
+// PC以下改行削除
+.hp_br_notPc {
+	@include maxmq(pc) {
+		display: none;
+	}
+}
+
+// タブレット以下改行削除
+.hp_br_notTab {
 	@include maxmq(tab) {
+		display: none;
+	}
+}
+
+// //////////////
+// PC以上改行削除
+.hp_br_minPc {
+	@include minmq(pc) {
+		display: none;
+	}
+}
+// タブレット以上改行削除
+.hp_br_minTab {
+	@include minmq(tab) {
 		display: none;
 	}
 }

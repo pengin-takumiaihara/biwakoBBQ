@@ -45,13 +45,25 @@ a:hover {
 @media screen and (max-width: 780px) {
   .ly_fv {
     background-image: url(../../assets/img/symbol/fv/fv_bgSP.jpg);
-    padding-bottom: 0;
   }
 }
 
 @media screen and (max-width: 1439px) {
   .ly_fv {
     height: 812.5px;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .ly_fv {
+    height: 750px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ly_fv {
+    height: 667px;
   }
 }
 
@@ -1704,23 +1716,47 @@ table {
   top: 11vw;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  width: 800px;
 }
 
 @media screen and (max-width: 1439px) {
   .un_fv_container {
-    top: 45%;
+    top: 20vh;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .un_fv_container {
+    top: 15vh;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .un_fv_container {
+    top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .un_fv_container {
+    padding: 0 20px;
+    top: 40%;
+    width: 100%;
   }
 }
 
 .un_fv_copy {
+  margin: 0 auto;
   width: 685px;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1100px) {
   .un_fv_copy {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -1736,8 +1772,36 @@ table {
   text-align: center;
 }
 
+@media screen and (max-width: 780px) {
+  .un_fv_text {
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .un_fv_text {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 2;
+    margin-top: 20px;
+  }
+}
+
 .un_fv_contactContainer {
   text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+  .un_fv_contactContainer a {
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .un_fv_contactContainer a {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
 }
 
 .un_fv_contact {
@@ -2336,8 +2400,26 @@ table {
   max-width: 850px;
 }
 
+@media screen and (max-width: 1100px) {
+  .hp_br_notPc {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 780px) {
-  .hp_br_notsp {
+  .hp_br_notTab {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .hp_br_minPc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .hp_br_minTab {
     display: none;
   }
 }

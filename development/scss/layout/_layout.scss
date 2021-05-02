@@ -12,10 +12,16 @@
 	height: 0;
 	@include maxmq(tab) {
 		background-image: url(../../assets/img/symbol/fv/fv_bgSP.jpg);
-		padding-bottom: 0;
 	}
 	@include maxmq(full) {
 		height: 812.5px;
+		padding-bottom: 0;
+	}
+	@include maxmq(pc) {
+		height: 750px;
+	}
+	@include maxmq(sp) {
+		height: 667px;
 	}
 	padding-bottom: calc(812.5 / 1440 *100%);
 }
@@ -32,7 +38,8 @@
 }
 .ly_concept_treeFirst , .ly_concept_treeSecond {
 	position: absolute;
-	z-index: 1;@media screen and (max-width: 1185px) {
+	z-index: 1;
+	@media screen and (max-width: 1185px) {
 		display: none;
 	}
 }
