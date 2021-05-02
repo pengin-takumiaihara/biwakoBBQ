@@ -1620,6 +1620,12 @@ a:hover {
   padding: 0 3em;
 }
 
+@media screen and (max-width: 780px) {
+  .bl_list_container .el_list_term {
+    font-size: 0.9375rem;
+  }
+}
+
 .bl_list_block:first-of-type {
   margin-top: 60px;
 }
@@ -1634,6 +1640,12 @@ a:hover {
 
 .el_list_description {
   margin-top: 15px;
+}
+
+@media screen and (max-width: 780px) {
+  .el_list_description {
+    font-size: 0.9375rem;
+  }
 }
 
 .el_list_plan:not(:first-of-type) {
@@ -1654,6 +1666,12 @@ a:hover {
 .el_list_wrap {
   align-items: flex-end;
   display: flex;
+}
+
+@media screen and (max-width: 780px) {
+  .el_list_wrap {
+    display: block;
+  }
 }
 
 .el_list_wrap .el_list_term {
@@ -1684,7 +1702,7 @@ a:hover {
 
 @media screen and (max-width: 480px) {
   .el_list_flexImg {
-    width: 100%;
+    height: 250px;
   }
 }
 
