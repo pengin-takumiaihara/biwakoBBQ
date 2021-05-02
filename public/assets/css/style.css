@@ -230,6 +230,12 @@ a:hover {
   padding: 51px 0;
 }
 
+@media screen and (max-width: 780px) {
+  .ly_footer_wrapper {
+    flex-direction: column;
+  }
+}
+
 /* 共通モジュールのスタイル */
 /************************************************/
 .el_section_title {
@@ -1873,19 +1879,49 @@ a:hover {
 .bl_footer_list {
   display: flex;
   flex-basis: 625px;
-  flex-wrap: wrap;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.41688rem;
   font-weight: 700;
   line-height: 1.17159;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 780px) {
+  .bl_footer_list {
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .bl_footer_list:last-of-type {
   margin-top: 16px;
 }
 
+@media screen and (max-width: 780px) {
+  .bl_footer_list:last-of-type {
+    margin-top: 1em;
+  }
+}
+
+.bl_footer_list:last-of-type li:last-of-type {
+  white-space: nowrap;
+}
+
 .bl_footer_list li:not(:first-of-type) {
   margin-left: 80px;
+}
+
+@media screen and (max-width: 1100px) {
+  .bl_footer_list li:not(:first-of-type) {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .bl_footer_list li:not(:first-of-type) {
+    margin-left: 0;
+    margin-top: 1em;
+  }
 }
 
 .bl_footer_list a {
@@ -1895,6 +1931,18 @@ a:hover {
 .el_footer_banner {
   flex-basis: 529px;
   transition: opacity .2s;
+}
+
+@media screen and (max-width: 780px) {
+  .el_footer_banner {
+    flex-basis: 0;
+    margin: 40px auto 0;
+    padding-bottom: 70px;
+    width: 80%;
+  }
+  .el_footer_banner img {
+    width: 100%;
+  }
 }
 
 .el_footer_banner:hover {
@@ -1909,6 +1957,12 @@ a:hover {
   line-height: 1.5;
   padding-top: .8em;
   text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+  .el_footer_copy {
+    padding: 1.5em 0;
+  }
 }
 
 .bl_underPage_container {

@@ -156,6 +156,9 @@
 // footer
 .ly_footer_wrapper {
 	display: flex;
+	@include maxmq(tab) {
+		flex-direction: column;
+	}
 	justify-content: space-between;
 	margin: 0 auto;
 	max-width: 1211px;
