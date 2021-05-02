@@ -9,9 +9,12 @@
 
 .un_concept_textWrap {
 	color: $sub_color;
-}
-
-.un_concept_textWrap {
+	@include maxmq(tab) {
+		padding: 0 30px;
+	}
+	@include maxmq(sp) {
+		@include l_height(15 , 25.5);
+	}
 	@include l_height(20 , 30);
 	margin: 0 auto;
 	margin-top: 50px;
