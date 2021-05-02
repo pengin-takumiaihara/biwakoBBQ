@@ -47,6 +47,9 @@
 .el_form_label {
 	flex-basis: 180px;
 	flex-shrink: 0;
+	@include maxmq(tab) {
+		font-size: rem(15);
+	}
 	@include f_around(21 , 31.5 , 700 ,false);
 	&::after {
 		color: #f00;

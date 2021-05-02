@@ -209,6 +209,7 @@
 }
 
 .un_privacy_container {
+	padding: 0 30px;
 	dt {
 		margin-top: 40px;
 	}
@@ -220,12 +221,25 @@
 
 .under {
 	@include maxmq(pc) {
-		.ly_header .ly_header_inner {
-			display: block;
-			.bl_header_block {
-				display: none;
-			}
+		.ly_header {
+			width: 100%;
 		}
+		.ly_header_inner.is_open {
+			width: 100%;
+		}
+	}
+	.ly_header {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+	.el_logo {
+		margin: 0;
+		padding: 1em 0;
+	}
+	.ly_header_inner {
+		margin: 0;
+		width: auto;
 	}
 }
 

@@ -75,6 +75,9 @@
 	cursor: pointer;
 }
 
+.el_hamburger_text {
+	display: none;
+}
 // ***********************
 // ハンバーガーメニュー
 // ***********************
@@ -138,6 +141,7 @@
 
 		&.is_open::before {
 			transform: rotate(45deg) translate(2px , 0);
+			width: 35px;
 		}
 
 		&.is_open::after {
@@ -150,7 +154,52 @@
 	}
 
 	// 展開時メニュースタイル
-	// .ly_header_inner {
-	// 	display: block;
-	// }
+	.ly_header_inner.is_open {
+		background-color: $accentSub_color;
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		@include z-index(hamburgerMenu);
+		justify-content: center;
+		position: fixed;
+		top: 0;
+
+		.bl_header_block {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			text-align: center;
+			width: 100%;
+		}
+
+		.el_header_list {
+			width: 100%;
+			a {
+				color: #fff;
+				@include f_around(22.67 , false , 700 , false);
+				padding: .4em 0;
+			}
+		}
+
+		.el_header_list:not(:first-of-type) {
+			margin-left: 0;
+		}
+
+		.el_header_list:nth-last-of-type(2) {
+			margin-left: 0;
+		}
+
+		.el_header_list:last-of-type {
+			margin-left: 0;
+		}
+
+		.el_header_listLogo {
+			display: none;
+		}
+
+		.el_hamburger_text {
+			display: inline-block;
+		}
+	}
 }

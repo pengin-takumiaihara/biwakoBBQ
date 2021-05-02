@@ -14,8 +14,10 @@ $(function () {
 
   // ***************************
   // ハンバーガーメニュー
-  $('.js_headerBtn').on('click', function () {
-    $('.el_headerBtn_line').toggleClass('is_open');
+  $('.js_headerBtn , .el_header_list > a , .ly_header_inner').on('click', function () {
+    $('.ly_header_inner , .el_headerBtn_line , .js_headerBtn').toggleClass('is_open');
+    $('body').toggleClass('is_noScroll');
+    $('.el_logo').toggle();
   })
 
 
