@@ -164,3 +164,31 @@
 	max-width: 1211px;
 	padding: 51px 0;
 }
+
+// スクロールボタン
+.ly_scrollBtn {
+	align-items: center;
+	background-color: #000;
+	border-radius: 50%;
+	bottom: 80px;
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	position: fixed;
+	right: 80px;
+	transition: opacity .2s;
+	width: 50px;
+
+	&:hover {
+		opacity: .7;
+	}
+
+	.el_scrollBtn_arrow {
+		@include arrow(15 , 2 , #fff , top);
+		margin-top: 6px;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

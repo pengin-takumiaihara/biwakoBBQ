@@ -236,6 +236,46 @@ a:hover {
   }
 }
 
+.ly_scrollBtn {
+  align-items: center;
+  background-color: #000;
+  border-radius: 50%;
+  bottom: 80px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  position: fixed;
+  right: 80px;
+  transition: opacity .2s;
+  width: 50px;
+}
+
+.ly_scrollBtn:hover {
+  opacity: .7;
+}
+
+.ly_scrollBtn .el_scrollBtn_arrow {
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  content: "";
+  display: inline-block;
+  height: 15px;
+  vertical-align: middle;
+  width: 15px;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  margin-top: 6px;
+}
+
+_:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
+  margin-bottom: 1px !important;
+}
+
+.ly_scrollBtn .el_scrollBtn_arrow:hover {
+  cursor: pointer;
+}
+
 /* 共通モジュールのスタイル */
 /************************************************/
 .el_section_title {
