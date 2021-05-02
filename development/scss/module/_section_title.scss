@@ -3,35 +3,52 @@
 .el_section_title {
 	color: $accent_color;
 	@include l_height(18 , 27);
+	@include maxmq(sp) {
+		@include f_around(15 , 22.5 , 700 , false);
+	}
+	padding: 0 20px;
 	position: relative;
 	text-align: center;
 
 	&::after {
 		display: block;
 		@include f_around(45 , 45 , 700 , false);
+		@include maxmq(sp) {
+			font-size: rem(30);
+		}
 		text-transform: capitalize;
 	}
 }
 
 .el_title_treeFirst , .el_title_treeSecond {
-	position: absolute;
-}
-.el_title_treeFirst {
-	left: 175px;
-	top: 55px;
-}
-.el_title_treeSecond {
-	right: 150px;
-	top: 50px;
+	@include maxmq(pc) {
+		display: none;
+	}
 }
 
-.el_section_concept {
-	padding-top: 80px;
+.el_title_SPtreeFirst , .el_title_SPtreeSecond {
+	@include minmq(pc) {
+		display: none;
+	}
+	@include maxmq(pc) {
+		display: block;
+		width: 200px;
+		img {
+			width: 100%;
+		}
+	}
+	@include maxmq(tab) {
+		// width: 100px;
+		width: 18vw;
+	}
+	@include maxmq(sp) {
+		width: 21vw;
+	}
 }
+
 .el_section_concept::after {
 	content: "concept";
 }
-
 .el_section_service::after {
 	content: "service";
 }
@@ -75,8 +92,7 @@
 }
 
 // Plan
-.el_section_plan {
-	margin: 0 auto;
+.un_plan_titleWrap {
 	padding-top: 80px;
 }
 
@@ -91,7 +107,7 @@
 }
 
 // faq
-.el_section_faq {
+.un_faq_titleWrap {
 	padding-top: 95px;
 }
 

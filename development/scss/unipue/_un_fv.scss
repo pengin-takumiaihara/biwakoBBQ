@@ -1,20 +1,17 @@
 /* fv */
 .un_fv_container {
 	@include maxmq(full) {
-		top: 20vh;
+		top: 15vh;
 	}
 	@include maxmq(pc) {
-		top: 15vh;
+		top: 10vh;
 		width: 70%;
 	}
 	@include maxmq(tab) {
-		top: 50%;
-		transform: translate(-50% , -50%);
-		width: 80%;
+		top: 15%;
 	}
 	@include maxmq(sp) {
 		padding: 0 20px;
-		top: 40%;
 		width: 100%;
 	}
 	left: 51%;

@@ -1,4 +1,12 @@
 /* concept */
+.un_concept_titleWrap {
+	@include maxmq(pc) {
+		justify-content: space-between;
+	}
+	justify-content: center;
+	padding-top: 80px;
+}
+
 .un_concept_textWrap {
 	color: $sub_color;
 }
