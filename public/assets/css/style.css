@@ -1970,6 +1970,12 @@ a:hover {
   max-width: 1140px;
 }
 
+@media screen and (max-width: 780px) {
+  .bl_underPage_container {
+    width: 80%;
+  }
+}
+
 .bl_underPage_container .el_accent_head {
   display: block;
   height: 82px;
@@ -2030,6 +2036,7 @@ a:hover {
 @media screen and (max-width: 780px) {
   .bl_underPage_container .el_underPage_back {
     line-height: 42px;
+    margin: 30px auto 50px;
     width: 90%;
   }
 }
@@ -2114,6 +2121,14 @@ a:hover {
   text-align: center;
 }
 
+@media screen and (max-width: 780px) {
+  .bl_underPage_read {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 1.66667;
+  }
+}
+
 .bl_underPage_textWrap {
   color: #406150;
   font-size: 1.25rem;
@@ -2165,6 +2180,14 @@ a:hover {
 
 .un_privacy_container dd {
   margin-top: 20px;
+}
+
+.under .ly_header_inner {
+  display: block;
+}
+
+.under .ly_header_inner .bl_header_block {
+  display: none;
 }
 
 .bl_table_head {

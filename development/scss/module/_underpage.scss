@@ -1,6 +1,10 @@
 .bl_underPage_container {
+	@include maxmq(tab) {
+		width: 80%;
+	}
 	margin: 0 auto;
 	max-width: 1140px;
+
 	.el_accent_head {
 		display: block;
 		height: 82px;
@@ -44,6 +48,7 @@
 		}
 		@include maxmq(tab) {
 			line-height: 42px;
+			margin: 30px auto 50px;
 			width: 90%;
 		}
 		line-height: 74px;
@@ -109,6 +114,9 @@
 .bl_underPage_read {
 	color: $accent_color;
 	@include f_around(20 , 27 , 700 , false);
+	@include maxmq(tab) {
+		@include f_around(15 , 25 , 700 , false);
+	}
 	margin: 0 auto;
 	margin-top: 44px;
 	max-width: 1040px;
@@ -159,5 +167,14 @@
 	}
 	dd {
 		margin-top: 20px;
+	}
+}
+
+.under {
+	.ly_header_inner {
+		display: block;
+		.bl_header_block {
+			display: none;
+		}
 	}
 }
