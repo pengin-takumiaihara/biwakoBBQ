@@ -1,6 +1,13 @@
 /* service */
 .un_service_text {
 	color: $accentSub_color;
+	@include maxmq(sp) {
+		font-size: 3.8vw;
+		margin: 19px auto 0;
+	}
+	@include maxmq(tab) {
+		padding: 0 20px;
+	}
 	margin-top: 38px;
 	text-align: center;
 }

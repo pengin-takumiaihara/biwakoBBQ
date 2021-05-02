@@ -13,10 +13,14 @@ var mySwiper = new Swiper('.swiper-container', {
   },
   // ブレイクポイント
   breakpoints: {
-    1025: {
+    1100: {
       slidesPerView: 2,
       spaceBetween: 10,
       centeredSlides: true,
+    },
+    480: {
+      slidesPerView: 2,
+      centeredSlides: false,
     },
   },
   // フリック操作

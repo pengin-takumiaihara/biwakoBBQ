@@ -1971,6 +1971,19 @@ table {
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+  .un_service_text {
+    font-size: 3.8vw;
+    margin: 19px auto 0;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .un_service_text {
+    padding: 0 20px;
+  }
+}
+
 .un_point_contaier {
   margin-top: -17px;
   padding-bottom: 80px;
