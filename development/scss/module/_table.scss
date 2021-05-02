@@ -17,9 +17,16 @@ td {
 	font-size: rem(16);
 	font-weight: 700;
 	height: 36px;
+	@include maxmq(tab) {
+		font-size: rem(14);
+		padding-left: 1em;
+	}
 	line-height: 36px;
 	padding-left: 2.5em;
 	&:last-of-type {
+		@include maxmq(tab) {
+			padding-right: .5em;
+		}
 		padding-right: 1.5em;
 		text-align: right;
 	}
@@ -34,10 +41,24 @@ table {
 .bl_table_head > * {
 	height: 66px;
 	@include f_around(27 , 43 , 700 , false);
+	@include maxmq(tab) {
+		font-size: rem(15);
+		height: 50px;
+		line-height: 50px;
+	}
 	line-height: 66px;
 	text-align: center;
 
 	&:not(:first-of-type) {
+		border-left: 4px solid $sub_color;
+		@include maxmq(tab) {
+			border-left: 0;
+		}
+	}
+}
+
+.bl_table_head .el_tableHead_price {
+	@include maxmq(tab) {
 		border-left: 4px solid $sub_color;
 	}
 }
@@ -46,9 +67,23 @@ table {
 	width: 76px;
 }
 .el_tableHead_type {
+	@include maxmq(tab) {
+		width: 70%;
+	}
+	@include maxmq(pc) {
+		width: 50%;
+	}
 	width: 610px;
 }
+
 .el_tableHead_price {
+	@include maxmq(tab) {
+		border-left: 4px solid $sub_color;
+		width: 30%;
+	}
+	@include maxmq(pc) {
+		width: 20%;
+	}
 	width: calc(920px - 76px - 610px);
 }
 
@@ -57,5 +92,11 @@ table {
 	text-align: center;
 	img {
 		vertical-align: middle;
+	}
+}
+
+@include maxmq(tab) {
+	.el_tableHead_check , .el_table_check , .el_table_checkCell {
+		display: none;
 	}
 }

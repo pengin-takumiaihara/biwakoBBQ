@@ -79,6 +79,13 @@ $space_endValue: 15 !default;
 }
 
 .hp_w850 {
+	@include maxmq(pc) {
+		width: 80%;
+	}
+	@include maxmq(sp) {
+		margin: 20px auto 0;
+		width: 100%;
+	}
 	margin: 50px auto 0;
 	max-width: 850px;
 }

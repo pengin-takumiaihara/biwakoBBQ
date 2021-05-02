@@ -1,6 +1,6 @@
 .bl_underPage_container {
 	@include maxmq(tab) {
-		width: 80%;
+		width: 85%;
 	}
 	margin: 0 auto;
 	max-width: 1140px;
@@ -18,6 +18,7 @@
 			font-size: rem(19);
 			height: 50px;
 			line-height: 50px;
+			margin: 50px auto 0;
 			width: 90%;
 		}
 		line-height: 82px;
@@ -63,6 +64,12 @@
 
 	.bl_strongBox_innerBlock {
 		align-self: flex-start;
+		@include maxmq(tab) {
+			width: 400px;
+		}
+		@include maxmq(sp) {
+			width: 100%;
+		}
 		margin-top: 0;
 		width: 455px;
 		&:nth-of-type(1) {
@@ -72,7 +79,14 @@
 		&:nth-of-type(2) {
 			border-color: $under_selfColor;
 			color: $under_selfColor;
+			@include maxmq(pc) {
+				margin-top: 45px;
+			}
 			.el_strongBox_subAbout {
+				@include maxmq(sp) {
+					font-size: rem(18);
+					width: 80%;
+				}
 				text-align: center;
 				width: 70%;
 			}
@@ -92,6 +106,12 @@
 
 .bl_underPage_blockWrap {
 	display: flex;
+	@include maxmq(pc) {
+		flex-direction: column;
+	}
+	@include maxmq(tab) {
+		margin: 50px auto 0;
+	}
 	margin: 60px auto 0;
 	max-width: 955px;
 }
@@ -114,8 +134,14 @@
 .bl_underPage_read {
 	color: $accent_color;
 	@include f_around(20 , 27 , 700 , false);
+	@include maxmq(pc) {
+		width: 80%;
+	}
 	@include maxmq(tab) {
 		@include f_around(15 , 25 , 700 , false);
+	}
+	@include maxmq(sp) {
+		width: 100%;
 	}
 	margin: 0 auto;
 	margin-top: 44px;
@@ -126,22 +152,36 @@
 
 .bl_underPage_textWrap {
 	color: $accent_color;
+	@include maxmq(tab) {
+		font-size: rem(15);
+	}
 	@include f_around(20 , 27 , 700 ,false);
-	margin-top: 50px;
+	margin: 50px auto 0;
 	text-align: center;
+	width: 80%;
 }
 
 .bl_underPage_rentalWrap {
+	@include maxmq(tab) {
+		padding: 0;
+	}
 	margin: 50px auto 0;
 	max-width: 920px;
+	padding: 0 30px;
 }
 .bl_underPage_planWrap {
+	@include maxmq(sp) {
+		margin: 30px auto 0;
+	}
 	margin: 50px auto 0;
 	max-width: 850px;
 }
 
 .el_underPage_text {
 	color: $accentSub_color;
+	@include maxmq(tab) {
+		font-size: rem(15);
+	}
 	@include f_around(20 , 27 , 700 ,false);
 	margin-top: 40px;
 	text-align: center;
@@ -155,9 +195,16 @@
 
 .el_underPage_attention {
 	@include f_around(27 , 36.5 , 700 , false);
+	@include maxmq(tab) {
+		font-size: rem(23);
+	}
 }
 .el_underPage_attentionList {
 	font-weight: 700;
+	@include maxmq(tab) {
+		font-size: rem(13);
+		text-align: left;
+	}
 	margin-top: 20px;
 }
 
@@ -170,11 +217,21 @@
 	}
 }
 
+
 .under {
-	.ly_header_inner {
-		display: block;
-		.bl_header_block {
-			display: none;
+	@include maxmq(pc) {
+		.ly_header .ly_header_inner {
+			display: block;
+			.bl_header_block {
+				display: none;
+			}
 		}
+	}
+}
+
+.under .el_underPage_download {
+	background-color: $accentSub_color;
+	@include minmq(tab) {
+		display: none;
 	}
 }
