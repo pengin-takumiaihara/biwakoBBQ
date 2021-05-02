@@ -22,10 +22,20 @@
 	align-items: flex-start;
 	display: flex;
 	flex-direction: column;
+	@include maxmq(tab) {
+		padding-left: 0;
+	}
 	justify-content: center;
 	padding-left: 1.5em;
 }
 .el_strongBox_annotation {
+	@include maxmq(tab) {
+		display: block;
+		margin-bottom: .5em;;
+	}
+	@include maxmq(sp) {
+		font-size: 3vw;
+	}
 	@include f_around(13 , false , 600 , false);
 }
 
@@ -68,7 +78,7 @@
 		flex-shrink: 0;
 		@include f_around(60 , false , 700 , false);
 		@include maxmq(pc) {
-			font-size: 5.5vw;
+			font-size: 5vw;
 			width: 37%;
 		}
 		@include maxmq(tab) {
@@ -100,6 +110,9 @@
 	@include maxmq(full) {
 		justify-content: center;
 	}
+	@include maxmq(tab) {
+		display: block;
+	}
 	justify-content: space-between;
 	margin-top: 45px;
 }
@@ -113,6 +126,9 @@
 }
 
 .el_strongBox_subttl {
+	@include maxmq(pc) {
+		font-size: rem(23);
+	}
 	@include f_around(27 , 35 , false , false);
 	margin-top: 15px;
 }
@@ -120,7 +136,10 @@
 #plan {
 	.bl_strongBox {
 		@include maxmq(full) {
-			width: 40vw;
+			width: 45vw;
+		}
+		@include maxmq(tab) {
+			width: 100%;
 		}
 		padding-bottom: 54px;
 		width: 548px;
@@ -137,8 +156,12 @@
 
 
 	.un_plan_recommend {
+		@include maxmq(pc) {
+			display: none;
+		}
 		@include maxmq(full) {
-			left: -100px;
+			left: -60px;
+			top: -120px;
 		}
 		left: -125px;
 		position: absolute;
@@ -158,6 +181,9 @@
 	}
 
 	.el_strongBox_mainImg {
+		@include maxmq(tab) {
+			width: 80%;
+		}
 		margin-top: 14px;
 		&:first-of-type {
 			position: relative;
@@ -172,12 +198,21 @@
 		margin-top: 38px;
 	}
 
-	.bl_strongBox_mainPrice {
+	.el_strongBox_mainPrice {
 		@include f_around(27 , 35 , 700 , false);
 	}
 
-	.bl_strongBox_mainValue {
+	.el_strongBox_mainValue {
+		@include maxmq(pc) {
+			font-size: rem(50);
+		}
 		@include f_around(60 , 79 , 700 , false);
+	}
+
+	.el_strongBox_mainAbout {
+		@include maxmq(pc) {
+			font-size: 1.5vw;
+		}
 	}
 
 	.bl_strongBox_mainList {
@@ -185,11 +220,21 @@
 		padding-bottom: 40px;
 
 		.bl_strongBox_mainItem {
+			align-items: center;
 			display: flex;
 			font-weight: 700;
+			@include maxmq(tab) {
+				font-size: rem(16);
+			}
+			@include maxmq(sp) {
+				font-size: rem(13);
+			}
 		}
 		.bl_strongBox_mainItem::before {
 			content: url(../../assets/img/symbol/plan/check.svg);
+			@include maxmq(sp) {
+				margin-right: .5em;
+			}
 			margin-right: 6px;
 			margin-top: 5px;
 		}
@@ -197,6 +242,14 @@
 
 	// テキスト画像
 	.un_plan_set {
+		@include maxmq(sp) {
+			height: 85px;
+			width: 114px;
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
 		position: absolute;
 		right: -48px;
 		top: -12px;
@@ -214,6 +267,13 @@
 	font-weight: 700;
 	@include maxmq(full) {
 		padding: 20px 0 20px 20px;
+	}
+	@include maxmq(tab) {
+		padding: 15px;
+		width: 400px;
+	}
+	@include maxmq(sp) {
+		width: 85%;
 	}
 	margin: 0 auto;
 	padding: 30px 0 18px 50px;
@@ -234,11 +294,27 @@
 
 	.el_strongBox_subAbout {
 		background-color: $sub_color;
+		@include maxmq(full) {
+			text-align: center;
+			width: 60%;
+		}
+		@include maxmq(pc) {
+			width: 75%;
+		}
+		@include maxmq(tab) {
+			@include f_around(20 , 31 , 700 , false);
+		}
 		@include f_around(27 , 43 , 700 , false);
 		left: 50%;
 		position: absolute;
 		top: -22px;
 		transform: translateX(-50%);
+	}
+
+	li {
+		@include maxmq(tab) {
+			font-size: rem(15);
+		}
 	}
 }
 
@@ -253,12 +329,19 @@
 }
 
 .el_strongBox_subtext {
+	@include maxmq(tab) {
+		font-size: rem(10);
+	}
 	@include f_around(15 , 22.5 , 500 , false);
 }
 
 .el_strongBox_subAddition {
 	color: $accent_color;
 	font-weight: 700;
+	@include maxmq(tab) {
+		font-size: rem(15);
+		margin-top: 30px;
+	}
 	margin-top: 45px;
 	text-align: center;
 }

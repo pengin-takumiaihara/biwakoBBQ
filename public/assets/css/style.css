@@ -187,9 +187,9 @@ a:hover {
 
 @media screen and (max-width: 480px) {
   .el_section_title {
-    font-size: 0.9375rem;
+    font-size: 0.8125rem;
     font-weight: 700;
-    line-height: 1.5;
+    line-height: 1.73077;
   }
 }
 
@@ -324,6 +324,12 @@ a:hover {
 
 .un_plan_titleWrap {
   padding-top: 80px;
+}
+
+@media screen and (max-width: 780px) {
+  .un_plan_titleWrap {
+    padding-top: 50px;
+  }
 }
 
 .el_section_activety {
@@ -703,9 +709,28 @@ a:hover {
   padding-left: 1.5em;
 }
 
+@media screen and (max-width: 780px) {
+  .el_strongBox_list {
+    padding-left: 0;
+  }
+}
+
 .el_strongBox_annotation {
   font-size: 0.8125rem;
   font-weight: 600;
+}
+
+@media screen and (max-width: 780px) {
+  .el_strongBox_annotation {
+    display: block;
+    margin-bottom: .5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .el_strongBox_annotation {
+    font-size: 3vw;
+  }
 }
 
 @media screen and (max-width: 1439px) {
@@ -761,7 +786,7 @@ a:hover {
 
 @media screen and (max-width: 1100px) {
   #service .bl_strongBox_mainBlock {
-    font-size: 5.5vw;
+    font-size: 5vw;
     width: 37%;
   }
 }
@@ -805,6 +830,12 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 780px) {
+  .bl_strongContainer {
+    display: block;
+  }
+}
+
 .el_strongBox_ttl {
   font-size: 2.25rem;
   font-weight: 600;
@@ -826,6 +857,12 @@ a:hover {
   margin-top: 15px;
 }
 
+@media screen and (max-width: 1100px) {
+  .el_strongBox_subttl {
+    font-size: 1.4375rem;
+  }
+}
+
 #plan .bl_strongBox {
   padding-bottom: 54px;
   width: 548px;
@@ -833,7 +870,13 @@ a:hover {
 
 @media screen and (max-width: 1439px) {
   #plan .bl_strongBox {
-    width: 40vw;
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #plan .bl_strongBox {
+    width: 100%;
   }
 }
 
@@ -857,9 +900,16 @@ a:hover {
   top: -105px;
 }
 
+@media screen and (max-width: 1100px) {
+  #plan .un_plan_recommend {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1439px) {
   #plan .un_plan_recommend {
-    left: -100px;
+    left: -60px;
+    top: -120px;
   }
 }
 
@@ -879,6 +929,12 @@ a:hover {
   margin-top: 14px;
 }
 
+@media screen and (max-width: 780px) {
+  #plan .el_strongBox_mainImg {
+    width: 80%;
+  }
+}
+
 #plan .el_strongBox_mainImg:first-of-type {
   position: relative;
 }
@@ -890,16 +946,28 @@ a:hover {
   margin-top: 38px;
 }
 
-#plan .bl_strongBox_mainPrice {
+#plan .el_strongBox_mainPrice {
   font-size: 1.6875rem;
   font-weight: 700;
   line-height: 1.2963;
 }
 
-#plan .bl_strongBox_mainValue {
+#plan .el_strongBox_mainValue {
   font-size: 3.75rem;
   font-weight: 700;
   line-height: 1.31667;
+}
+
+@media screen and (max-width: 1100px) {
+  #plan .el_strongBox_mainValue {
+    font-size: 3.125rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #plan .el_strongBox_mainAbout {
+    font-size: 1.5vw;
+  }
 }
 
 #plan .bl_strongBox_mainList {
@@ -908,8 +976,21 @@ a:hover {
 }
 
 #plan .bl_strongBox_mainList .bl_strongBox_mainItem {
+  align-items: center;
   display: flex;
   font-weight: 700;
+}
+
+@media screen and (max-width: 780px) {
+  #plan .bl_strongBox_mainList .bl_strongBox_mainItem {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #plan .bl_strongBox_mainList .bl_strongBox_mainItem {
+    font-size: 0.8125rem;
+  }
 }
 
 #plan .bl_strongBox_mainList .bl_strongBox_mainItem::before {
@@ -918,10 +999,27 @@ a:hover {
   margin-top: 5px;
 }
 
+@media screen and (max-width: 480px) {
+  #plan .bl_strongBox_mainList .bl_strongBox_mainItem::before {
+    margin-right: .5em;
+  }
+}
+
 #plan .un_plan_set {
   position: absolute;
   right: -48px;
   top: -12px;
+}
+
+@media screen and (max-width: 480px) {
+  #plan .un_plan_set {
+    height: 85px;
+    width: 114px;
+  }
+  #plan .un_plan_set img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 #plan .el_strongBox_crossIcon {
@@ -941,6 +1039,19 @@ a:hover {
 @media screen and (max-width: 1439px) {
   .bl_strongBox_innerBlock {
     padding: 20px 0 20px 20px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .bl_strongBox_innerBlock {
+    padding: 15px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bl_strongBox_innerBlock {
+    width: 85%;
   }
 }
 
@@ -968,6 +1079,33 @@ a:hover {
           transform: translateX(-50%);
 }
 
+@media screen and (max-width: 1439px) {
+  .bl_strongBox_innerBlock .el_strongBox_subAbout {
+    text-align: center;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .bl_strongBox_innerBlock .el_strongBox_subAbout {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .bl_strongBox_innerBlock .el_strongBox_subAbout {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.55;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .bl_strongBox_innerBlock li {
+    font-size: 0.9375rem;
+  }
+}
+
 .bl_strongBox_subBlock {
   padding: 0 43px;
 }
@@ -990,11 +1128,24 @@ a:hover {
   line-height: 1.5;
 }
 
+@media screen and (max-width: 780px) {
+  .el_strongBox_subtext {
+    font-size: 0.625rem;
+  }
+}
+
 .el_strongBox_subAddition {
   color: #406150;
   font-weight: 700;
   margin-top: 45px;
   text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+  .el_strongBox_subAddition {
+    font-size: 0.9375rem;
+    margin-top: 30px;
+  }
 }
 
 .el_accent_head {
@@ -1037,6 +1188,7 @@ a:hover {
     font-size: 1.1875rem;
     height: 50px;
     line-height: 50px;
+    padding: 0 1em;
     width: 90%;
   }
 }
@@ -1082,6 +1234,12 @@ a:hover {
   }
 }
 
+#plan .bl_strongBox_subBlock {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 #plan .bl_strongBox_subBlock .el_accent_head {
   background-color: #70a24d;
   height: 65px;
@@ -1093,8 +1251,43 @@ a:hover {
   width: 100%;
 }
 
+@media screen and (max-width: 1100px) {
+  #plan .bl_strongBox_subBlock .el_accent_head {
+    font-size: 2.6vw;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #plan .bl_strongBox_subBlock .el_accent_head {
+    font-size: 1.25rem;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #plan .bl_strongBox_subBlock .el_accent_head {
+    font-size: 1.125rem;
+    width: 85%;
+  }
+}
+
 #plan .el_strongBox_btnWrap {
   margin-top: 75px;
+}
+
+#plan .el_accent_attentionWrap {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 780px) {
+  #plan .el_accent_attentionWrap {
+    margin-top: 30px;
+  }
 }
 
 #plan .el_accent_attention {
@@ -1106,9 +1299,15 @@ a:hover {
   text-align: center;
 }
 
-@media screen and (max-width: 1330px) {
+@media screen and (max-width: 1100px) {
   #plan .el_accent_attention {
     font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #plan .el_accent_attention {
+    font-size: 0.9375rem;
   }
 }
 
@@ -1873,16 +2072,22 @@ table {
 }
 
 .un_fv_text {
-  font-size: 1.6875rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  line-height: 2.03704;
+  line-height: 2.45536;
   margin-top: 45px;
   text-align: center;
 }
 
+@media screen and (max-width: 1100px) {
+  .un_fv_text {
+    font-size: 2.5vw;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .un_fv_text {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
 }
 
@@ -2016,6 +2221,7 @@ table {
 @media screen and (max-width: 780px) {
   .un_point_contaier {
     margin-top: -60px;
+    padding: 0 0 60px 0;
   }
 }
 
@@ -2231,8 +2437,24 @@ table {
 /* plan */
 .un_plan_read {
   color: #fff;
+  font-weight: 700;
   margin-top: 50px;
   text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+  .un_plan_read {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .un_plan_read {
+    font-size: 0.9375rem;
+    width: 70%;
+  }
 }
 
 .un_addition_container {

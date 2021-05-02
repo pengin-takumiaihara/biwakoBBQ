@@ -4,7 +4,7 @@
 	color: $accent_color;
 	@include l_height(18 , 27);
 	@include maxmq(sp) {
-		@include f_around(15 , 22.5 , 700 , false);
+		@include f_around(13 , 22.5 , 700 , false);
 	}
 	padding: 0 20px;
 	position: relative;
@@ -110,6 +110,9 @@
 
 // Plan
 .un_plan_titleWrap {
+	@include maxmq(tab) {
+		padding-top: 50px;
+	}
 	padding-top: 80px;
 }
 

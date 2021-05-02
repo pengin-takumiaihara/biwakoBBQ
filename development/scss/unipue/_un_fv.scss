@@ -33,9 +33,12 @@
 }
 
 .un_fv_text {
-	@include f_around(27 , 55, 700 , false);
+	@include f_around(22.4 , 55, 700 , false);
+	@include maxmq(pc) {
+		font-size: 2.5vw;
+	}
 	@include maxmq(tab) {
-		font-size: 3.5vw;
+		font-size: 3vw;
 	}
 	@include maxmq(sp) {
 		@include f_around(15 , 30, 700 , false);
