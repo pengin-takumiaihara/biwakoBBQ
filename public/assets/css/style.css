@@ -1609,6 +1609,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 .bl_modal_window {
   background-image: url(../../assets/img/photo/modal/modal_bg.png);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   display: none;
@@ -1624,9 +1625,22 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 @media screen and (max-width: 1100px) {
   .bl_modal_window {
-    background-size: cover;
-    height: 70vh;
+    height: 80vh;
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .bl_modal_window {
+    background-image: url(../../assets/img/photo/modal/modal_bgSP.png);
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bl_modal_window {
+    background-image: url(../../assets/img/photo/modal/modal_bgSP.png);
+    width: 300px;
   }
 }
 
@@ -1648,11 +1662,51 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   padding: 70px 60px 40px 50px;
 }
 
+@media screen and (max-width: 1100px) {
+  .bl_modal_windowInner {
+    padding: 150px 60px 40px 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .bl_modal_windowInner {
+    padding: 180px 20px 40px 30px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .bl_modal_windowInner {
+    padding: 160px 20px 40px 30px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .bl_modal_windowInner {
+    flex-direction: column;
+    padding: 140px 20px 40px 30px;
+    width: 100%;
+  }
+}
+
 .bl_modal_text {
   color: #fff;
   font-size: 0.9375rem;
   line-height: 1.5;
   margin-top: 40px;
+}
+
+@media screen and (max-width: 900px) {
+  .bl_modal_text {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .bl_modal_text {
+    font-size: 0.875rem;
+    margin-top: 40px;
+  }
 }
 
 .el_modal_textWrap {
@@ -1665,6 +1719,19 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   top: 35px;
 }
 
+@media screen and (max-width: 1100px) {
+  .el_button_close {
+    top: 18%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .el_button_close {
+    right: 10px;
+    top: 8.5%;
+  }
+}
+
 .el_button_close:hover img {
   cursor: pointer;
 }
@@ -1673,13 +1740,54 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   width: 60%;
 }
 
+@media screen and (max-width: 780px) {
+  .bl_modal_innerBlock {
+    width: 100%;
+  }
+}
+
 .el_modal_tree {
   flex-shrink: 0;
   width: 90px;
 }
 
+@media screen and (max-width: 780px) {
+  .el_modal_tree {
+    display: none;
+  }
+}
+
 .el_modal_tree img {
   height: 100%;
+}
+
+@media screen and (min-width: 780px) {
+  .el_modal_treeSP {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .el_modal_treeSP {
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .el_modal_img {
+    height: 200px;
+    text-align: center;
+  }
+  .el_modal_img img {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .el_modal_img {
+    height: 175px;
+  }
 }
 
 .bl_modal_slide {

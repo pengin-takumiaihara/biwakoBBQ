@@ -15,15 +15,23 @@
 
 .bl_modal_window {
 	background-image: url(../../assets/img/photo/modal/modal_bg.png);
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: none;
 	height: 703px;
 	@include z-index(modal);
 	@include maxmq(pc) {
-		background-size: cover;
-		height: 70vh;
+		height: 80vh;
 		width: 90%;
+	}
+	@include maxmq(tab) {
+		background-image: url(../../assets/img/photo/modal/modal_bgSP.png);
+		width: 300px;
+	}
+	@include maxmq(sp) {
+		background-image: url(../../assets/img/photo/modal/modal_bgSP.png);
+		width: 300px;
 	}
 	left: 50%;
 	position: fixed;
@@ -44,14 +52,36 @@
 	align-items: center;
 	display: flex;
 	@include z-index(modalInnre);
+	@include maxmq(pc) {
+		padding: 150px 60px 40px 50px;
+	}
 	justify-content: space-between;
 	padding: 70px 60px 40px 50px;
+	@media screen and (max-width: 900px) {
+		padding: 180px 20px 40px 30px;
+		width: 100%;
+	}
+	@media screen and (max-width: 800px) {
+		padding: 160px 20px 40px 30px;
+	}
+	@media screen and (max-width: 780px) {
+		flex-direction: column;
+		padding: 140px 20px 40px 30px;
+		width: 100%;
+	}
 }
 
 .bl_modal_text {
 	color: $sub_color;
 	@include f_around(15 , 22.5 ,false ,false);
 	margin-top: 40px;
+	@media screen and (max-width: 900px) {
+		margin-top: 20px;
+	}
+	@media screen and (max-width: 780px) {
+		font-size: rem(14);
+		margin-top: 40px;
+	}
 }
 
 .el_modal_textWrap {
@@ -59,6 +89,13 @@
 }
 
 .el_button_close {
+	@include maxmq(pc) {
+		top: 18%;
+	}
+	@include maxmq(tab) {
+		right: 10px;
+		top: 8.5%;
+	}
 	position: absolute;
 	right: 65px;
 	top: 35px;
@@ -69,14 +106,42 @@
 }
 
 .bl_modal_innerBlock {
+	@include maxmq(tab) {
+		width: 100%;
+	}
 	width: 60%;
 }
 
 .el_modal_tree {
 	flex-shrink: 0;
+	@include maxmq(tab) {
+		display: none;
+	}
 	width: 90px;
 	img {
 		height: 100%;
+	}
+}
+.el_modal_treeSP {
+	@include minmq(tab) {
+		display: none;
+	}
+	@include maxmq(tab) {
+		display: block;
+		margin-top: 5px;
+	}
+}
+
+.el_modal_img {
+	@media screen and (max-width: 900px) {
+		height: 200px;
+		text-align: center;
+		img {
+			height: 100%;
+		}
+	}
+	@media screen and (max-width: 780px) {
+		height: 175px;
 	}
 }
 
