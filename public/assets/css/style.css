@@ -243,11 +243,19 @@ a:hover {
   bottom: 80px;
   display: flex;
   height: 50px;
+  z-index: 30;
   justify-content: center;
   position: fixed;
   right: 80px;
   transition: opacity .2s;
   width: 50px;
+}
+
+@media screen and (max-width: 780px) {
+  .ly_scrollBtn {
+    bottom: 30px;
+    right: 30px;
+  }
 }
 
 .ly_scrollBtn:hover {
@@ -505,7 +513,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   margin-top: 1px;
   padding: 0;
   width: 38px;
-  z-index: 100;
+  z-index: 20;
 }
 
 .swiper-button-prev img:hover, .swiper-button-next img:hover {

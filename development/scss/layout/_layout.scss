@@ -173,6 +173,11 @@
 	bottom: 80px;
 	display: flex;
 	height: 50px;
+	@include maxmq(tab) {
+		bottom: 30px;
+		right: 30px;
+	}
+	@include z-index(topBtn);
 	justify-content: center;
 	position: fixed;
 	right: 80px;
