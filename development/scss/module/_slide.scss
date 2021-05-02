@@ -26,6 +26,9 @@
 	@include maxmq(pc) {
 		max-width: 1000px;
 	}
+	@include maxmq(sp) {
+		padding: 0 20px;
+	}
 	margin: 0 auto;
 	max-width: 1250px;
 	overflow: hidden;

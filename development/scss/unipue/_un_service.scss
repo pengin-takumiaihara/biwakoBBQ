@@ -16,6 +16,9 @@
 	@include maxmq(full) {
 		padding: 0 10px 80px;
 	}
+	@include maxmq(tab) {
+		margin-top: -60px;
+	}
 	margin-top: -17px;
 	padding-bottom: 80px;
 }
@@ -23,7 +26,11 @@
 .un_point_block {
 	display: flex;
 	@include maxmq(pc) {
+		align-items: center;
 		flex-direction: column;
+	}
+	@include maxmq(sp) {
+		padding: 0 35px;
 	}
 	justify-content: space-between;
 	margin: 0 auto;
@@ -31,6 +38,9 @@
 }
 
 .un_point_list {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 	flex-shrink: 0;
 
 	a {
@@ -39,6 +49,7 @@
 }
 
 .un_point_sub {
+	font-weight: 700;
 	transition: background-color .2s , color .2s;
 }
 
@@ -47,10 +58,17 @@
 		margin-left: 0;
 		width: 32.5%;
 	}
+	@include maxmq(pc) {
+		margin-left: 0;
+		width: 100%;
+	}
 	margin-left: 25px;
 	width: 390px;
 
 	.un_point_aboutWrap {
+		@include maxmq(pc) {
+			margin-left: 0;
+		}
 		margin-left: 15px;
 	}
 
@@ -73,6 +91,12 @@
 	@include maxmq(full) {
 		margin-left: 0;
 		width: 31.2%;
+	}
+	@include maxmq(pc) {
+		width: 100%;
+	}
+	@include maxmq(sp) {
+		margin-top: 10px;
 	}
 	margin-left: 30px;
 	width: 378px;
@@ -117,9 +141,14 @@
 		margin-left: 0;
 		width: 35.4%;
 	}
+	@include maxmq(pc) {
+		width: 100%;
+	}
+	@include maxmq(sp) {
+		margin-top: 10px;
+	}
 	margin-left: 15px;
 	width: 413px;
-
 	.un_point_aboutWrap {
 		margin-left: -35px;
 	}
@@ -130,10 +159,17 @@
 	width: 100%;
 
 	.un_point_head {
+		font-size: rem(27);
+		font-weight: 700;
 		height: 52px;
-		@include f_around(27 , 4.05 , false , false);
+		@include maxmq(sp) {
+			font-size: rem(22);
+		}
 		line-height: 52px;
 		padding: 0 1.2em;
+		@media screen and (max-width: 370px) {
+			font-size: rem(18);
+		}
 	}
 
 	.un_point_sub {
@@ -145,5 +181,9 @@
 
 .un_point_text {
 	color: $accentSub_color;
+	font-weight: 700;
+	@include maxmq(sp) {
+		font-size: rem(15);
+	}
 	margin-top: 12px;
 }

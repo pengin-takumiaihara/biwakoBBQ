@@ -83,8 +83,10 @@
 // カルーセルスライダークリック時
 .bl_modal_slide {
 	display: none;
-	// height: 50vh;
 	@include z-index(modal);
+	@include maxmq(tab) {
+		width: 80vw;
+	}
 	left: 50%;
 	position: fixed;
 	top: 50%;
