@@ -1,4 +1,11 @@
 .bl_form {
+	@include maxmq(pc) {
+		padding: 62px 30px 100px;
+	}
+	@include maxmq(tab) {
+		padding: 40px 0 80px;
+		width: 80%;
+	}
 	margin: 0 auto;
 	max-width: 930px;
 	padding: 62px 0 100px;
@@ -11,6 +18,9 @@
 .bl_form_block {
 	align-items: center;
 	display: flex;
+	@include maxmq(tab) {
+		display: block;
+	}
 	&:not(:first-of-type) {
 		margin-top: 40px;
 	}
@@ -24,6 +34,9 @@
 	}
 	&:first-of-type::after {
 		content: "▼";
+		@include maxmq(tab) {
+			top: 2.5em;
+		}
 		position: absolute;
 		right: .8em;
 		top: .4em;
@@ -45,6 +58,9 @@
 	background-color: #e6ebe0;
 	border: 0;
 	border-radius: 4px;
+	@include maxmq(tab) {
+		margin: 8px 0 0 0;
+	}
 	margin-left: 46px;
 	padding: .5em 0;
 	width: 100%;

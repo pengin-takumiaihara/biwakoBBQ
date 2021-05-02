@@ -131,6 +131,9 @@
 
 // faq
 .un_faq_titleWrap {
+	@include maxmq(tab) {
+		padding-top: 50px;
+	}
 	padding-top: 95px;
 }
 

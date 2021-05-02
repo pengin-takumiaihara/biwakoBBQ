@@ -1,6 +1,12 @@
 /* contact */
 .un_section_read {
 	color: $accent_color;
+	@include maxmq(tab) {
+		font-size: rem(15);;
+		margin: 35px auto 0;
+		text-align: left;
+		width: 80%;
+	}
 	@include f_around(20 , 27 ,700 , false);
 	margin-top: 35px;
 	text-align: center;
