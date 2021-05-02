@@ -2,6 +2,10 @@
 .un_activety_read {
 	color: $sub_color;
 	@include f_around(20 , 26 , 400 , false);
+	@include maxmq(tab) {
+		font-size: rem(15);
+		padding: 0 30px;
+	}
 	margin-top: 80px;
 	text-align: center;
 }
@@ -13,14 +17,28 @@
 .un_activety_textBox {
 	background-color: $sub_color;
 	color: $accent_color;
+	@include maxmq(sp) {
+		padding: 19px 20px;
+	}
 	margin: 40px auto 0;
 	max-width: 1010px;
-	padding: 1.2em 1.2em .9em 1.2em;
+	padding: 19px 39px;
 	text-align: center;
 }
 
 .un_activety_strong {
 	@include f_around(27 , 43 , 700 , false);
+	@include maxmq(tab) {
+		font-size: rem(23);
+	}
+}
+
+.un_activety_strongText {
+	@include f_around(20 , 26 , 700 , false);
+	@include maxmq(tab) {
+		@include f_around(15 , 24 , 700 , false);
+		margin-top: 20px;
+	}
 }
 
 .un_activety_commentBox {
@@ -31,6 +49,9 @@
 .un_activety_list {
 	display: inline-block;
 	@include f_around(17 , 20 , 500 , false);
+	@include maxmq(tab) {
+		font-size: rem(11);
+	}
 	margin-top: 20px;
 	text-align: left;
 }
@@ -39,22 +60,23 @@
 	@include maxmq(pc) {
 		padding: 0 20px;
 	}
-	@include maxmq(tab) {
-		padding: 0;
-		width: 80%;
-	}
 	margin: 0 auto;
 	margin-top: 55px;
 	max-width: 1050px;
+	@media screen and (max-width: 900px) {
+		margin-top: 40px;
+		padding: 0;
+		width: 80%;
+	}
 }
 
 .un_activety_mainContainer {
 	align-items: flex-start;
 	display: flex;
-	@include maxmq(tab) {
+	justify-content: space-between;
+	@media screen and (max-width: 900px) {
 		flex-direction: column;
 	}
-	justify-content: space-between;
 
 	&:not(:first-of-type) {
 		margin-top: 50px;
@@ -78,12 +100,15 @@
 	border-radius: 10px 10px 10px 10px;
 	flex-basis: 477px;
 	flex-shrink: 0;
-	@include maxmq(pc) {
-		flex-basis: 47%;
-		flex-shrink: 1;
-	}
 	@include maxmq(tab) {
 		flex-basis: 100%;
+	}
+	margin-left: 10px;
+	@media screen and (max-width: 900px) {
+		flex-basis: 47%;
+		flex-shrink: 1;
+		margin-left: 0;
+		margin-top: 21px;
 	}
 }
 
@@ -98,29 +123,48 @@
 .un_activety_descriptionbox {
 	color: $accent_color;
 	font-weight: 700;
-	padding: 30px 30px 30px 25px;;
+	@include maxmq(tab) {
+		font-size: rem(15);
+		padding: 19px 28px 20px 22px;
+	}
+	padding: 30px 30px 30px 25px;
 }
 
 .un_activety_descriptionPrice {
 	background-color: $accent_color;
 	color: $sub_color;
 	display: inline-block;
+	@include maxmq(tab) {
+		margin-top: 20px;
+	}
 	margin-top: 29px;
 	padding: .3em 1em;
 }
 
 .un_activety_descriptionList {
+	@include maxmq(tab) {
+		margin-top: 0;
+	}
 	margin-top: 21px;
 }
 
 .un_activety_descriptionBottomWrap {
 	align-items: flex-end;
 	display: flex;
+	@include maxmq(tab) {
+		align-items: flex-start;
+		flex-direction: column;
+	}
 	justify-content: space-between;
 }
+
 .un_activety_descriptionLink {
 	align-items: flex-start;
 	display: flex;
+	@include maxmq(tab) {
+		margin-left: auto;
+		margin-top: 20px;
+	}
 	img {
 		padding-left: .5em;
 	}
@@ -129,10 +173,18 @@
 		content: url(../../assets/img/symbol/activety/link_btn.svg);
 		display: inline-block;
 		height: 1em;
+		@include maxmq(tab) {
+			margin-top: -.3em;
+		}
 		margin-left: .5em;
 		width: 1em;
 	}
 	&:hover {
 		text-decoration: underline;
+	}
+}
+.un_activety_slash {
+	@include maxmq(tab) {
+		display: none;
 	}
 }

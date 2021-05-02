@@ -32,7 +32,7 @@
 		line-height: 82px;
 		overflow: hidden;
 		text-align: center;
-		width: 730px;
+		width: 700px;
 		&:hover {
 			a {
 				background-color: #568932;
@@ -49,6 +49,9 @@
 		width: 100%;
 
 		.el_accent_head {
+			@include maxmq(tab) {
+				margin-top: 50px;
+			}
 			margin-top: 80px;
 		}
 
@@ -59,7 +62,7 @@
 
 		.el_headTree_first {
 			@include maxmq(full) {
-				left: 1%;
+				left: 0;
 			}
 			left: -50px;
 		}
@@ -141,6 +144,7 @@
 			font-size: rem(19);
 			height: 50px;
 			line-height: 50px;
+			margin: 40px 0 0 0;
 			width: 90%;
 		}
 		line-height: 82px;
@@ -174,6 +178,9 @@
 	}
 	.el_headTree_second {
 		right: 0;
+	}
+	.el_headTree_sp {
+		padding-bottom: 40px;
 	}
 }
 
@@ -221,7 +228,7 @@
 	.el_headTree_sp {
 		display: block;
 		margin: 0 auto;
-		width: 80%;
+		width: 90%;
 		img {
 			width: 100%;
 		}

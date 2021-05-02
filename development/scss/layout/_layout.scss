@@ -91,13 +91,51 @@
 }
 
 .ly_activety_man {
+	@include maxmq(pc) {
+		left: 10%;
+	}
+	@include maxmq(tab) {
+		height: 101px;
+		left: 5%;
+		top: 80px;
+		width: 142px;
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+	@include maxmq(sp) {
+		left: 0;
+	}
 	left: 27.5%;
 	top: 47px;
 }
 
 .ly_activety_woman {
+	@include maxmq(pc) {
+		right: 10%;
+	}
+	@include maxmq(tab) {
+		height: 101px;
+		right: 5%;
+		top: 60px;
+		width: 142px;
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+	@include maxmq(sp) {
+		right: 0;
+	}
 	right: 27.5%;
 	top: 47px;
+}
+
+.ly_activety_treeFirst , .ly_activety_treeSecond {
+	@include maxmq(pc) {
+		display: none;
+	}
 }
 
 .ly_activety_treeFirst {

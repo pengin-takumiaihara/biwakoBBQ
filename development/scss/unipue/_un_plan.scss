@@ -18,8 +18,13 @@
 .un_addition_container {
 	color: $accent_color;
 	display: flex;
+	@include maxmq(sp) {
+		font-size: rem(11);
+		margin-top: 20px;
+	}
 	justify-content: center;
 	margin-top: 33px;
+	padding: 0 30px;
 }
 
 .el_accent_icon {
