@@ -177,6 +177,9 @@
 
 		.el_header_list {
 			animation: opacity 1s cubic-bezier(.250, .460, .450, .940) both;
+			@include hack_IE11 {
+				opacity: 1;
+			}
 			opacity: 0;
 			width: 100%;
 			a {

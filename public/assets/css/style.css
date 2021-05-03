@@ -896,6 +896,9 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
     opacity: 0;
     width: 100%;
   }
+  _:-ms-lang(x)::-ms-backdrop, .ly_header_inner.is_open .el_header_list {
+    opacity: 1;
+  }
   .ly_header_inner.is_open .el_header_list a {
     color: #fff;
     font-size: 1.41688rem;
