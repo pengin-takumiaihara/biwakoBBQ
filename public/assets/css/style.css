@@ -858,6 +858,8 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
     cursor: pointer;
   }
   .ly_header_inner.is_open {
+    -webkit-animation: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     background-color: #70a24d;
     display: flex;
     flex-direction: column;
@@ -877,6 +879,9 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
     width: 100%;
   }
   .ly_header_inner.is_open .el_header_list {
+    -webkit-animation: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+            animation: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    opacity: 0;
     width: 100%;
   }
   .ly_header_inner.is_open .el_header_list a {
@@ -894,6 +899,22 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 }
 
 @media screen and (max-width: 1100px) {
+  @-webkit-keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   .ly_header_inner.is_open .el_header_list:not(:first-of-type) {
     margin-left: 0;
   }
@@ -908,6 +929,14 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   }
   .ly_header_inner.is_open .el_hamburger_text {
     display: inline-block;
+  }
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
 

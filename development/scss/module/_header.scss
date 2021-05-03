@@ -155,6 +155,7 @@
 
 	// 展開時メニュースタイル
 	.ly_header_inner.is_open {
+		animation: opacity .2s cubic-bezier(.250, .460, .450, .940) both;
 		background-color: $accentSub_color;
 		display: flex;
 		flex-direction: column;
@@ -175,6 +176,8 @@
 		}
 
 		.el_header_list {
+			animation: opacity 1s cubic-bezier(.250, .460, .450, .940) both;
+			opacity: 0;
 			width: 100%;
 			a {
 				color: #fff;
@@ -182,6 +185,17 @@
 				padding: .4em 0;
 				@media screen and (max-width: 360px) {
 					padding: .25em 0;
+				}
+			}
+		}
+
+		.el_header_list.is_open {
+			@keyframes opacity {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
 				}
 			}
 		}
@@ -204,6 +218,16 @@
 
 		.el_hamburger_text {
 			display: inline-block;
+		}
+	}
+	.ly_header_inner.is_open {
+		@keyframes opacity {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
 		}
 	}
 }
