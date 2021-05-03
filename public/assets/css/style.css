@@ -3024,7 +3024,7 @@ table {
 }
 
 .un_point_sub {
-  font-weight: 700;
+  font-weight: 500;
   transition: background-color .2s , color .2s;
 }
 
