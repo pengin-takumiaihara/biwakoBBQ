@@ -61,7 +61,9 @@
 	background-color: #e6ebe0;
 	border: 0;
 	border-radius: 4px;
+	font-size: rem(18);
 	@include maxmq(tab) {
+		font-size: rem(16);
 		margin: 8px 0 0 0;
 	}
 	margin-left: 46px;

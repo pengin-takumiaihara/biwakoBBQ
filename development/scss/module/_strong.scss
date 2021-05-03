@@ -145,7 +145,6 @@
 			width: 45vw;
 		}
 		@include maxmq(tab) {
-			background-color: $support_color;
 			width: 100%;
 		}
 		padding-bottom: 54px;
@@ -241,12 +240,13 @@
 		.bl_strongBox_mainItem {
 			align-items: center;
 			display: flex;
+			font-size: rem(18);
 			font-weight: 700;
 			@include maxmq(tab) {
 				font-size: rem(16);
 			}
 			@include maxmq(sp) {
-				font-size: rem(13);
+				font-size: rem(12);
 			}
 		}
 		.bl_strongBox_mainItem::before {

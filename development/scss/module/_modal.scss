@@ -18,34 +18,27 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
+	border-radius: 30px;
 	display: none;
 	height: auto;
-	height: 703px;
 	@include z-index(modal);
 	@include maxmq(pc) {
-		height: 80vh;
+		height: 90vh;
 		width: 90%;
 	}
 	@include maxmq(tab) {
 		background-image: url(../../assets/img/photo/modal/modal_bgSP.png);
 		background-size: cover;
-		height: auto;
-		width: 300px;
+		height: 90vh;
 	}
 	@include maxmq(sp) {
 		background-image: url(../../assets/img/photo/modal/modal_bgSP.png);
-		top: 50%;
-		width: 300px;
 	}
 	left: 50%;
-	overflow: scroll;
 	position: fixed;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	width: 872px;
-	@media screen and (max-width: 360px) {
-		top: 85%;
-	}
 }
 
 .el_modal_bg {
@@ -59,14 +52,16 @@
 .bl_modal_windowInner {
 	align-items: center;
 	display: flex;
-	@include z-index(modalInnre);
+	height: 95%;
 	@include maxmq(pc) {
 		padding: 150px 60px 40px 50px;
 	}
+	@include z-index(modalInnre);
 	justify-content: space-between;
+	overflow-y: scroll;
 	padding: 70px 60px 40px 50px;
 	@media screen and (max-width: 900px) {
-		padding: 180px 20px 40px 30px;
+		padding: 130px 20px 40px 30px;
 		width: 100%;
 	}
 	@media screen and (max-width: 800px) {
@@ -98,11 +93,12 @@
 
 .el_button_close {
 	@include maxmq(pc) {
-		top: 18%;
+		right: 10px;
+		top: 22%;
 	}
 	@include maxmq(tab) {
 		right: 10px;
-		top: 3%;
+		top: 15px;
 	}
 	position: absolute;
 	right: 65px;

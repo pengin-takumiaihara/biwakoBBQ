@@ -227,7 +227,7 @@ a:hover {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 1211px;
-  padding: 51px 0;
+  padding: 51px 20px;
 }
 
 @media screen and (max-width: 780px) {
@@ -1111,7 +1111,6 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 @media screen and (max-width: 780px) {
   #plan .bl_strongBox {
-    background-color: #c5d02c;
     width: 100%;
   }
 }
@@ -1238,6 +1237,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 #plan .bl_strongBox_mainList .bl_strongBox_mainItem {
   align-items: center;
   display: flex;
+  font-size: 1.125rem;
   font-weight: 700;
 }
 
@@ -1249,7 +1249,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 @media screen and (max-width: 480px) {
   #plan .bl_strongBox_mainList .bl_strongBox_mainItem {
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -1718,12 +1718,11 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  border-radius: 30px;
   display: none;
   height: auto;
-  height: 703px;
   z-index: 200;
   left: 50%;
-  overflow: scroll;
   position: fixed;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1733,7 +1732,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 @media screen and (max-width: 1100px) {
   .bl_modal_window {
-    height: 80vh;
+    height: 90vh;
     width: 90%;
   }
 }
@@ -1742,22 +1741,13 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   .bl_modal_window {
     background-image: url(../../assets/img/photo/modal/modal_bgSP.png);
     background-size: cover;
-    height: auto;
-    width: 300px;
+    height: 90vh;
   }
 }
 
 @media screen and (max-width: 480px) {
   .bl_modal_window {
     background-image: url(../../assets/img/photo/modal/modal_bgSP.png);
-    top: 50%;
-    width: 300px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .bl_modal_window {
-    top: 85%;
   }
 }
 
@@ -1775,7 +1765,9 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 .bl_modal_windowInner {
   align-items: center;
   display: flex;
+  height: 95%;
   justify-content: space-between;
+  overflow-y: scroll;
   padding: 70px 60px 40px 50px;
 }
 
@@ -1787,7 +1779,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 @media screen and (max-width: 900px) {
   .bl_modal_windowInner {
-    padding: 180px 20px 40px 30px;
+    padding: 130px 20px 40px 30px;
     width: 100%;
   }
 }
@@ -1838,14 +1830,15 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 @media screen and (max-width: 1100px) {
   .el_button_close {
-    top: 18%;
+    right: 10px;
+    top: 22%;
   }
 }
 
 @media screen and (max-width: 780px) {
   .el_button_close {
     right: 10px;
-    top: 3%;
+    top: 15px;
   }
 }
 
@@ -2136,6 +2129,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   background-color: #e6ebe0;
   border: 0;
   border-radius: 4px;
+  font-size: 1.125rem;
   margin-left: 46px;
   padding: .5em;
   width: 100%;
@@ -2143,6 +2137,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 @media screen and (max-width: 780px) {
   .el_form_area {
+    font-size: 1rem;
     margin: 8px 0 0 0;
   }
 }
@@ -2754,6 +2749,12 @@ table {
   .un_fv_container {
     padding: 0 20px;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .un_fv_container {
+    top: 36%;
   }
 }
 

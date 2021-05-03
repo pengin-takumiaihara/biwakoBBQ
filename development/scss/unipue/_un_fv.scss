@@ -19,6 +19,9 @@
 	top: 11vw;
 	transform: translateX(-50%);
 	width: 800px;
+	@media screen and (max-width: 350px) {
+		top: 36%;
+	}
 }
 
 .un_fv_copy {
