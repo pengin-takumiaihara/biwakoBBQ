@@ -161,6 +161,7 @@
 		height: 100vh;
 		@include z-index(hamburgerMenu);
 		justify-content: center;
+		padding-top: 0;
 		position: fixed;
 		top: 0;
 
@@ -179,6 +180,9 @@
 				color: #fff;
 				@include f_around(22.67 , false , 700 , false);
 				padding: .4em 0;
+				@media screen and (max-width: 360px) {
+					padding: .25em 0;
+				}
 			}
 		}
 

@@ -4,6 +4,7 @@
 	@include f_around(20 , 26 , 400 , false);
 	@include maxmq(tab) {
 		font-size: rem(15);
+		margin-top: 50px;
 		padding: 0 30px;
 	}
 	margin-top: 80px;
@@ -15,8 +16,7 @@
 }
 
 .un_activety_textBox {
-	background-color: $sub_color;
-	color: $accent_color;
+	color: $sub_color;
 	@include maxmq(sp) {
 		padding: 19px 20px;
 	}
@@ -134,7 +134,9 @@
 	background-color: $accent_color;
 	color: $sub_color;
 	display: inline-block;
+	font-size: rem(20);
 	@include maxmq(tab) {
+		font-size: rem(15);
 		margin-top: 20px;
 	}
 	margin-top: 29px;

@@ -13,6 +13,7 @@
 .un_concept_textWrap {
 	color: $sub_color;
 	@include maxmq(tab) {
+		margin-top: 20px;
 		padding: 0 30px;
 	}
 	@include maxmq(sp) {
@@ -33,5 +34,15 @@
 	background-size: cover;
 	display: block;
 	height: 135.38px;
+	@include maxmq(tab) {
+		background-image: url(../../assets/img/symbol/concept/bg_greenSP.svg);
+		background-position: bottom;
+		background-repeat: repeat-x;
+		background-size: contain;
+		margin-top: 2em;
+	}
+	@include maxmq(sp) {
+		margin-top: -1em;
+	}
 	margin-top: 2.5em;
 }

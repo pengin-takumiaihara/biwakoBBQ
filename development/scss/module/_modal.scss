@@ -19,6 +19,7 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: none;
+	height: auto;
 	height: 703px;
 	@include z-index(modal);
 	@include maxmq(pc) {
@@ -27,17 +28,24 @@
 	}
 	@include maxmq(tab) {
 		background-image: url(../../assets/img/photo/modal/modal_bgSP.png);
+		background-size: cover;
+		height: auto;
 		width: 300px;
 	}
 	@include maxmq(sp) {
 		background-image: url(../../assets/img/photo/modal/modal_bgSP.png);
+		top: 50%;
 		width: 300px;
 	}
 	left: 50%;
+	overflow: scroll;
 	position: fixed;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	width: 872px;
+	@media screen and (max-width: 360px) {
+		top: 85%;
+	}
 }
 
 .el_modal_bg {
@@ -66,7 +74,7 @@
 	}
 	@media screen and (max-width: 780px) {
 		flex-direction: column;
-		padding: 140px 20px 40px 30px;
+		padding: 80px 20px 40px 30px;
 		width: 100%;
 	}
 }
@@ -94,7 +102,7 @@
 	}
 	@include maxmq(tab) {
 		right: 10px;
-		top: 8.5%;
+		top: 3%;
 	}
 	position: absolute;
 	right: 65px;

@@ -1,7 +1,6 @@
 /* plan */
 .un_plan_read {
 	color: $sub_color;
-	font-weight: 700;
 	@include maxmq(tab) {
 		margin: 0 auto;
 		margin-top: 30px;

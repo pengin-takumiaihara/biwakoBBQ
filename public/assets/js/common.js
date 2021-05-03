@@ -43,15 +43,15 @@ $(function () {
   // ***************************
   // モーダル
   $('.js_modalOpen').click(function () {
-    $("body").addClass("is_noScroll"); // 背景固定させるクラス付与
-    var id = $(this).data('id'); // 何番目のキャプション（モーダルウィンドウ）か認識
+    $("body").addClass("is_noScroll");
+    var id = $(this).data('id');
     $('.js_overlay , .is_open_modal[data-id="modal' + id + '"]').fadeIn();
     // 背景固定時
     $('body').css('padding-right', '15px');
   });
-  // オーバーレイクリックでもモーダルを閉じるように
+
   $('.js_close , .js_overlay').click(function () {
-    $("body").removeClass("is_noScroll"); // 背景固定させるクラス削除
+    $("body").removeClass("is_noScroll");
     $('.js_overlay, .is_open_modal').fadeOut();
     // 背景固定解除時
     $('body').css('padding-right', '0');

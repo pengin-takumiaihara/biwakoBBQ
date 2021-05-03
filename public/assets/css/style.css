@@ -157,7 +157,7 @@ a:hover {
   .ly_activety_man {
     height: 101px;
     left: 5%;
-    top: 80px;
+    top: 40px;
     width: 142px;
   }
   .ly_activety_man img {
@@ -187,7 +187,7 @@ a:hover {
   .ly_activety_woman {
     height: 101px;
     right: 5%;
-    top: 60px;
+    top: 20px;
     width: 142px;
   }
   .ly_activety_woman img {
@@ -428,7 +428,11 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 @media screen and (max-width: 780px) {
   .el_section_subTitle {
-    opacity: 0;
+    margin: 50px auto;
+    width: 80%;
+  }
+  .el_section_subTitle img {
+    width: 100%;
   }
 }
 
@@ -444,6 +448,12 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 .el_section_activety {
   padding-top: 80px;
+}
+
+@media screen and (max-width: 780px) {
+  .el_section_activety {
+    padding-top: 60px;
+  }
 }
 
 .el_section_information {
@@ -594,6 +604,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 .el_accordion_btn::before {
   content: "Q.";
+  padding-right: .3em;
 }
 
 .el_accordion_icon {
@@ -847,6 +858,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
     height: 100vh;
     z-index: 40;
     justify-content: center;
+    padding-top: 0;
     position: fixed;
     top: 0;
   }
@@ -867,6 +879,15 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
     font-weight: 700;
     padding: .4em 0;
   }
+}
+
+@media screen and (max-width: 1100px) and (max-width: 360px) {
+  .ly_header_inner.is_open .el_header_list a {
+    padding: .25em 0;
+  }
+}
+
+@media screen and (max-width: 1100px) {
   .ly_header_inner.is_open .el_header_list:not(:first-of-type) {
     margin-left: 0;
   }
@@ -1053,6 +1074,12 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   }
 }
 
+@media screen and (max-width: 780px) {
+  .el_strongBox_ttl {
+    font-size: 1.4375rem;
+  }
+}
+
 .el_strongBox_subttl {
   font-size: 1.6875rem;
   line-height: 1.2963;
@@ -1062,6 +1089,12 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 @media screen and (max-width: 1100px) {
   .el_strongBox_subttl {
     font-size: 1.4375rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .el_strongBox_subttl {
+    font-size: 0.9375rem;
   }
 }
 
@@ -1078,6 +1111,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 @media screen and (max-width: 780px) {
   #plan .bl_strongBox {
+    background-color: #c5d02c;
     width: 100%;
   }
 }
@@ -1121,6 +1155,12 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   height: 130px;
 }
 
+@media screen and (max-width: 780px) {
+  #plan .el_strongBox_ttlblock {
+    height: 85px;
+  }
+}
+
 #plan .bl_strongBox_mainBlock {
   border-bottom: 2px dashed #406150;
   flex-direction: column;
@@ -1154,6 +1194,12 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   line-height: 1.2963;
 }
 
+@media screen and (max-width: 780px) {
+  #plan .el_strongBox_mainPrice {
+    font-size: 1.25rem;
+  }
+}
+
 #plan .el_strongBox_mainValue {
   font-size: 3.75rem;
   font-weight: 700;
@@ -1166,9 +1212,21 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   }
 }
 
+@media screen and (max-width: 780px) {
+  #plan .el_strongBox_mainValue {
+    font-size: 2.5rem;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   #plan .el_strongBox_mainAbout {
     font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #plan .el_strongBox_mainAbout {
+    font-size: 0.8125rem;
   }
 }
 
@@ -1490,6 +1548,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
+  width: 100%;
 }
 
 @media screen and (max-width: 780px) {
@@ -1660,9 +1719,11 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   background-repeat: no-repeat;
   background-size: contain;
   display: none;
+  height: auto;
   height: 703px;
   z-index: 200;
   left: 50%;
+  overflow: scroll;
   position: fixed;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1680,6 +1741,8 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 @media screen and (max-width: 780px) {
   .bl_modal_window {
     background-image: url(../../assets/img/photo/modal/modal_bgSP.png);
+    background-size: cover;
+    height: auto;
     width: 300px;
   }
 }
@@ -1687,7 +1750,14 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 @media screen and (max-width: 480px) {
   .bl_modal_window {
     background-image: url(../../assets/img/photo/modal/modal_bgSP.png);
+    top: 50%;
     width: 300px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .bl_modal_window {
+    top: 85%;
   }
 }
 
@@ -1731,7 +1801,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 @media screen and (max-width: 780px) {
   .bl_modal_windowInner {
     flex-direction: column;
-    padding: 140px 20px 40px 30px;
+    padding: 80px 20px 40px 30px;
     width: 100%;
   }
 }
@@ -1775,7 +1845,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 @media screen and (max-width: 780px) {
   .el_button_close {
     right: 10px;
-    top: 8.5%;
+    top: 3%;
   }
 }
 
@@ -2067,7 +2137,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   border: 0;
   border-radius: 4px;
   margin-left: 46px;
-  padding: .5em 0;
+  padding: .5em;
   width: 100%;
 }
 
@@ -2146,7 +2216,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   .el_footer_banner {
     flex-basis: 0;
     margin: 40px auto 0;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
     width: 80%;
   }
   .el_footer_banner img {
@@ -2653,7 +2723,7 @@ table {
 
 /* fv */
 .un_fv_container {
-  left: 51%;
+  left: 50%;
   position: absolute;
   top: 11vw;
   -webkit-transform: translateX(-50%);
@@ -2676,7 +2746,7 @@ table {
 
 @media screen and (max-width: 780px) {
   .un_fv_container {
-    top: 15%;
+    top: 21%;
   }
 }
 
@@ -2795,6 +2865,7 @@ table {
 
 @media screen and (max-width: 780px) {
   .un_concept_textWrap {
+    margin-top: 20px;
     padding: 0 30px;
   }
 }
@@ -2816,6 +2887,22 @@ table {
   display: block;
   height: 135.38px;
   margin-top: 2.5em;
+}
+
+@media screen and (max-width: 780px) {
+  .un_concept_bottomBg {
+    background-image: url(../../assets/img/symbol/concept/bg_greenSP.svg);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: contain;
+    margin-top: 2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .un_concept_bottomBg {
+    margin-top: -1em;
+  }
 }
 
 /* service */
@@ -2851,7 +2938,7 @@ table {
 
 @media screen and (max-width: 780px) {
   .un_point_contaier {
-    margin-top: -60px;
+    margin-top: -50px;
     padding: 0 0 60px 0;
   }
 }
@@ -3062,13 +3149,13 @@ table {
 @media screen and (max-width: 480px) {
   .un_point_text {
     font-size: 0.9375rem;
+    font-weight: 500;
   }
 }
 
 /* plan */
 .un_plan_read {
   color: #fff;
-  font-weight: 700;
   margin-top: 50px;
   text-align: center;
 }
@@ -3121,6 +3208,7 @@ table {
 @media screen and (max-width: 780px) {
   .un_activety_read {
     font-size: 0.9375rem;
+    margin-top: 50px;
     padding: 0 30px;
   }
 }
@@ -3130,8 +3218,7 @@ table {
 }
 
 .un_activety_textBox {
-  background-color: #fff;
-  color: #406150;
+  color: #fff;
   margin: 40px auto 0;
   max-width: 1010px;
   padding: 19px 39px;
@@ -3293,12 +3380,14 @@ table {
   background-color: #406150;
   color: #fff;
   display: inline-block;
+  font-size: 1.25rem;
   margin-top: 29px;
   padding: .3em 1em;
 }
 
 @media screen and (max-width: 780px) {
   .un_activety_descriptionPrice {
+    font-size: 0.9375rem;
     margin-top: 20px;
   }
 }

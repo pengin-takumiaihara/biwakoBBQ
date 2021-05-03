@@ -8,13 +8,13 @@
 		width: 70%;
 	}
 	@include maxmq(tab) {
-		top: 15%;
+		top: 21%;
 	}
 	@include maxmq(sp) {
 		padding: 0 20px;
 		width: 100%;
 	}
-	left: 51%;
+	left: 50%;
 	position: absolute;
 	top: 11vw;
 	transform: translateX(-50%);
