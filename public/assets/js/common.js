@@ -12,6 +12,15 @@ $(function () {
     return false;
   });
 
+  var btn = $('.ly_scrollBtn');
+  $(window).on('load scroll', function () {
+    if ($(this).scrollTop() > 100) {
+      btn.addClass('is_scrollBtn');
+    } else {
+      btn.removeClass('is_scrollBtn');
+    }
+  });
+
   // ***************************
   // ハンバーガーメニュー
   $('.js_headerBtn , .el_header_list > a , .ly_header_inner').on('click', function () {
