@@ -3260,8 +3260,9 @@ table {
 }
 
 .un_activety_textBox {
-  color: #fff;
-  margin: 40px auto;
+  background-color: #fff;
+  color: #406150;
+  margin: 40px auto 0;
   max-width: 1010px;
   padding: 19px 39px;
   text-align: center;
@@ -3269,13 +3270,13 @@ table {
 
 @media screen and (max-width: 780px) {
   .un_activety_textBox {
-    padding: 0 20px;
+    padding: 34px 54px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .un_activety_textBox {
-    padding: 0 20px;
+    padding: 34px 0;
   }
 }
 
@@ -3308,6 +3309,7 @@ table {
 
 .un_activety_commentBox {
   color: #fff;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -3315,8 +3317,7 @@ table {
   display: inline-block;
   font-size: 1.0625rem;
   font-weight: 500;
-  line-height: 1.17647;
-  margin-top: 20px;
+  line-height: 1.23529;
   text-align: left;
 }
 

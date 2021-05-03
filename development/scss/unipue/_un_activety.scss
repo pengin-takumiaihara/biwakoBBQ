@@ -16,14 +16,15 @@
 }
 
 .un_activety_textBox {
-	color: $sub_color;
+	background-color: $sub_color;
+	color: $accent_color;
 	@include maxmq(tab) {
-		padding: 0 20px;
+		padding: 34px 54px;
 	}
 	@include maxmq(sp) {
-		padding: 0 20px;
+		padding: 34px 0;
 	}
-	margin: 40px auto;
+	margin: 40px auto 0;
 	max-width: 1010px;
 	padding: 19px 39px;
 	text-align: center;
@@ -46,16 +47,16 @@
 
 .un_activety_commentBox {
 	color: $sub_color;
+	margin-top: 20px;
 	text-align: center;
 }
 
 .un_activety_list {
 	display: inline-block;
-	@include f_around(17 , 20 , 500 , false);
+	@include f_around(17 , 21 , 500 , false);
 	@include maxmq(tab) {
 		font-size: rem(11);
 	}
-	margin-top: 20px;
 	text-align: left;
 }
 
