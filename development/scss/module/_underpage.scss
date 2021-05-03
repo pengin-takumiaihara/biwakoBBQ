@@ -209,6 +209,9 @@
 }
 
 .un_privacy_container {
+	@include maxmq(tab) {
+		padding: 0;
+	}
 	padding: 0 30px;
 	dt {
 		margin-top: 40px;

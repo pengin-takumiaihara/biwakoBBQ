@@ -2541,6 +2541,12 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   padding: 0 30px;
 }
 
+@media screen and (max-width: 780px) {
+  .un_privacy_container {
+    padding: 0;
+  }
+}
+
 .un_privacy_container dt {
   margin-top: 40px;
 }
