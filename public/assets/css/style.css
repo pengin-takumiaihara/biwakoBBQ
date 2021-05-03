@@ -2051,7 +2051,6 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 @media screen and (max-width: 780px) {
   .el_list_flexImg {
     margin-top: 20px;
-    width: 80%;
   }
   .el_list_flexImg img {
     height: 100%;
@@ -2061,7 +2060,8 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 @media screen and (max-width: 480px) {
   .el_list_flexImg {
-    height: 250px;
+    height: 20%;
+    width: 83%;
   }
 }
 
@@ -2137,14 +2137,16 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 .bl_form_block:first-of-type::after {
   content: "▼";
+  font-size: 0.9375rem;
   position: absolute;
   right: .8em;
-  top: .4em;
+  top: .8em;
 }
 
 @media screen and (max-width: 780px) {
   .bl_form_block:first-of-type::after {
-    top: 2.5em;
+    font-size: 0.75rem;
+    top: 4em;
   }
 }
 
