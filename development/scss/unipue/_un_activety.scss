@@ -24,6 +24,9 @@
 	@include maxmq(sp) {
 		padding: 34px 0;
 	}
+	@include hack_IE11 {
+		padding: 20px 30px;
+	}
 	margin: 40px auto 0;
 	max-width: 1010px;
 	padding: 19px 39px;

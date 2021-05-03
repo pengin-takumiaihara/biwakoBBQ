@@ -9,6 +9,11 @@ body {
   overflow-x: hidden;
 }
 
+/* IE表示用のCSS */
+_:-ms-lang(x)::-ms-backdrop, body {
+  font-family: Verdana, Meiryo, sans-serif;
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -971,7 +976,6 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 1.5em;
 }
 
 @media screen and (max-width: 780px) {
@@ -1006,7 +1010,6 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 #service .bl_strongBox {
   border: 5px solid #406150;
-  height: 126px;
   margin: 56px auto 0;
   max-width: 1136px;
 }
@@ -1075,12 +1078,17 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   font-size: 1.25rem;
   font-weight: 700;
   justify-content: center;
+  padding: 20px;
 }
 
 @media screen and (max-width: 780px) {
   #service .bl_strongBox_subBlock {
     padding: 20px;
   }
+}
+
+_:-ms-lang(x)::-ms-backdrop, #service .el_strongBox_list {
+  display: block;
 }
 
 .bl_strongContainer {
@@ -3282,6 +3290,10 @@ table {
   .un_activety_textBox {
     padding: 34px 0;
   }
+}
+
+_:-ms-lang(x)::-ms-backdrop, .un_activety_textBox {
+  padding: 20px 30px;
 }
 
 .un_activety_strong {

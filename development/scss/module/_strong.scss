@@ -26,7 +26,6 @@
 		padding-left: 0;
 	}
 	justify-content: center;
-	padding-left: 1.5em;
 }
 .el_strongBox_annotation {
 	@include maxmq(tab) {
@@ -49,7 +48,6 @@
 	}
 	.bl_strongBox {
 		border: 5px solid $accent_color;
-		height: 126px;
 		@include maxmq(tab) {
 			flex-direction: column;
 			height: auto;
@@ -100,6 +98,13 @@
 			padding: 20px;
 		}
 		justify-content: center;
+		padding: 20px;
+	}
+
+	.el_strongBox_list {
+		@include hack_IE11 {
+			display: block;
+		}
 	}
 }
 

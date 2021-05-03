@@ -9,6 +9,16 @@ body {
 	overflow-x: hidden;
 }
 
+/* IE表示用のCSS */
+body {
+	@include hack_IE11 {
+		font-family: Verdana,
+		Meiryo,
+		sans-serif;
+	}
+}
+
+
 img {
 	height: auto;
 	max-width: 100%;
