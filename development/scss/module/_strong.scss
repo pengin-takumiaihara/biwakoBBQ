@@ -141,6 +141,7 @@
 
 #plan {
 	.bl_strongBox {
+		display: block;
 		@include maxmq(full) {
 			width: 45vw;
 		}
@@ -185,7 +186,8 @@
 
 	.bl_strongBox_mainBlock {
 		border-bottom: 2px dashed $accent_color;
-		flex-direction: column;
+		// flex-direction: column;
+		display: block;
 		padding: 0 20px;
 	}
 
@@ -193,6 +195,7 @@
 		@include maxmq(tab) {
 			width: 80%;
 		}
+		margin: 0 auto;
 		margin-top: 14px;
 		&:first-of-type {
 			position: relative;

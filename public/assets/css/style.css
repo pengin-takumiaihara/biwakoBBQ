@@ -1141,6 +1141,7 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 }
 
 #plan .bl_strongBox {
+  display: block;
   padding-bottom: 54px;
   width: 548px;
 }
@@ -1204,11 +1205,12 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
 
 #plan .bl_strongBox_mainBlock {
   border-bottom: 2px dashed #406150;
-  flex-direction: column;
+  display: block;
   padding: 0 20px;
 }
 
 #plan .el_strongBox_mainImg {
+  margin: 0 auto;
   margin-top: 14px;
 }
 
