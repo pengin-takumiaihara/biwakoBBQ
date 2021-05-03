@@ -178,3 +178,13 @@
 	}
 	margin-top: 12px;
 }
+
+.un_point_img {
+	@include maxmq(pc) {
+		min-width: 300px;
+		width: 50%;
+		img {
+			width: 100%;
+		}
+	}
+}
