@@ -3065,13 +3065,6 @@ table {
   text-decoration: none;
 }
 
-.un_point_list:first-of-type .un_point_sub::after {
-  content: "▶︎";
-  left: 9.3em;
-  position: absolute;
-  top: 0;
-}
-
 .un_point_list:nth-of-type(2) {
   margin-left: 30px;
   width: 378px;
@@ -3108,14 +3101,6 @@ table {
   color: #70a24d;
 }
 
-.un_point_list:nth-of-type(2) .un_point_sub::after {
-  color: #70a24d;
-  content: "▼";
-  left: 8.6em;
-  position: absolute;
-  top: 0;
-}
-
 .un_point_list:nth-of-type(2) .un_point_sub:hover {
   background-color: #70a24d;
   cursor: pointer;
@@ -3128,6 +3113,10 @@ table {
 
 .un_point_list:nth-of-type(2) .un_point_sub:hover::after {
   color: #fff;
+}
+
+.un_point_after {
+  padding-left: .5em;
 }
 
 .un_point_list:last-of-type {
