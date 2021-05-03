@@ -25,6 +25,7 @@
 }
 
 .un_point_block {
+	align-items: flex-start;
 	display: flex;
 	@include maxmq(pc) {
 		align-items: center;
@@ -42,7 +43,6 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	flex-shrink: 0;
 
 	a {
 		display: block;
@@ -57,14 +57,11 @@
 .un_point_list:first-of-type {
 	@include maxmq(full) {
 		margin-left: 0;
-		width: 32.5%;
 	}
 	@include maxmq(pc) {
 		margin-left: 0;
 		width: 100%;
 	}
-	margin-left: 25px;
-	width: 390px;
 
 	.un_point_aboutWrap {
 		@include maxmq(pc) {
@@ -82,18 +79,14 @@
 }
 
 .un_point_list:nth-of-type(2) {
-	@include maxmq(full) {
-		margin-left: 0;
-		width: 31.2%;
-	}
 	@include maxmq(pc) {
+		padding-left: 0;
 		width: 100%;
 	}
 	@include maxmq(sp) {
 		margin-top: 10px;
 	}
-	margin-left: 30px;
-	width: 378px;
+	padding-left: 20px;
 
 	.un_point_sub {
 		background-color: $sub_color;
@@ -129,7 +122,6 @@
 .un_point_list:last-of-type {
 	@include maxmq(full) {
 		margin-left: 0;
-		width: 35.4%;
 	}
 	@include maxmq(pc) {
 		width: 100%;
@@ -137,9 +129,11 @@
 	@include maxmq(sp) {
 		margin-top: 10px;
 	}
-	margin-left: 15px;
-	width: 413px;
+
 	.un_point_aboutWrap {
+		@include maxmq(pc) {
+			margin-left: 0;
+		}
 		margin-left: -35px;
 	}
 }
@@ -154,6 +148,7 @@
 		height: 52px;
 		@include maxmq(sp) {
 			font-size: rem(22);
+			padding: 0 1em;
 		}
 		line-height: 52px;
 		padding: 0 1.2em;
@@ -181,10 +176,15 @@
 
 .un_point_img {
 	@include maxmq(pc) {
+		height: auto;
 		min-width: 300px;
 		width: 50%;
 		img {
-			width: 100%;
+			height: auto;
 		}
+	}
+	img {
+		height: 100%;
+		width: 100%;
 	}
 }

@@ -2993,6 +2993,7 @@ table {
 }
 
 .un_point_block {
+  align-items: flex-start;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -3016,7 +3017,6 @@ table {
   align-items: center;
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
 }
 
 .un_point_list a {
@@ -3028,15 +3028,9 @@ table {
   transition: background-color .2s , color .2s;
 }
 
-.un_point_list:first-of-type {
-  margin-left: 25px;
-  width: 390px;
-}
-
 @media screen and (max-width: 1439px) {
   .un_point_list:first-of-type {
     margin-left: 0;
-    width: 32.5%;
   }
 }
 
@@ -3066,19 +3060,12 @@ table {
 }
 
 .un_point_list:nth-of-type(2) {
-  margin-left: 30px;
-  width: 378px;
-}
-
-@media screen and (max-width: 1439px) {
-  .un_point_list:nth-of-type(2) {
-    margin-left: 0;
-    width: 31.2%;
-  }
+  padding-left: 20px;
 }
 
 @media screen and (max-width: 1100px) {
   .un_point_list:nth-of-type(2) {
+    padding-left: 0;
     width: 100%;
   }
 }
@@ -3119,15 +3106,9 @@ table {
   padding-left: .5em;
 }
 
-.un_point_list:last-of-type {
-  margin-left: 15px;
-  width: 413px;
-}
-
 @media screen and (max-width: 1439px) {
   .un_point_list:last-of-type {
     margin-left: 0;
-    width: 35.4%;
   }
 }
 
@@ -3147,6 +3128,12 @@ table {
   margin-left: -35px;
 }
 
+@media screen and (max-width: 1100px) {
+  .un_point_list:last-of-type .un_point_aboutWrap {
+    margin-left: 0;
+  }
+}
+
 .un_point_aboutWrap {
   text-align: center;
   width: 100%;
@@ -3163,6 +3150,7 @@ table {
 @media screen and (max-width: 480px) {
   .un_point_aboutWrap .un_point_head {
     font-size: 1.375rem;
+    padding: 0 1em;
   }
 }
 
@@ -3193,12 +3181,18 @@ table {
 
 @media screen and (max-width: 1100px) {
   .un_point_img {
+    height: auto;
     min-width: 300px;
     width: 50%;
   }
   .un_point_img img {
-    width: 100%;
+    height: auto;
   }
+}
+
+.un_point_img img {
+  height: 100%;
+  width: 100%;
 }
 
 /* plan */
