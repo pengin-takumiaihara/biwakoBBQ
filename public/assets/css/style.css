@@ -303,6 +303,12 @@ _:-ms-lang(x)::-ms-backdrop, .ly_scrollBtn .el_scrollBtn_arrow {
   }
 }
 
+@media screen and (max-width: 350px) {
+  .el_section_title {
+    font-size: 0.75rem;
+  }
+}
+
 .el_section_title::after {
   display: block;
   font-size: 2.8125rem;
@@ -3226,15 +3232,21 @@ table {
 
 .un_activety_textBox {
   color: #fff;
-  margin: 40px auto 0;
+  margin: 40px auto;
   max-width: 1010px;
   padding: 19px 39px;
   text-align: center;
 }
 
+@media screen and (max-width: 780px) {
+  .un_activety_textBox {
+    padding: 0 20px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .un_activety_textBox {
-    padding: 19px 20px;
+    padding: 0 20px;
   }
 }
 

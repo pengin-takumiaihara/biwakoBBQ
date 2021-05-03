@@ -17,10 +17,13 @@
 
 .un_activety_textBox {
 	color: $sub_color;
-	@include maxmq(sp) {
-		padding: 19px 20px;
+	@include maxmq(tab) {
+		padding: 0 20px;
 	}
-	margin: 40px auto 0;
+	@include maxmq(sp) {
+		padding: 0 20px;
+	}
+	margin: 40px auto;
 	max-width: 1010px;
 	padding: 19px 39px;
 	text-align: center;
