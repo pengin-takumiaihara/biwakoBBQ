@@ -235,9 +235,9 @@ a:hover {
   padding: 51px 20px;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1000px) {
   .ly_footer_wrapper {
-    flex-direction: column;
+    display: block;
   }
 }
 
@@ -1847,7 +1847,7 @@ _:-ms-lang(x)::-ms-backdrop, #service .el_strongBox_list {
 
 @media screen and (max-width: 780px) {
   .bl_modal_windowInner {
-    flex-direction: column;
+    display: block;
     padding: 80px 20px 40px 30px;
     width: 100%;
   }
@@ -1935,7 +1935,8 @@ _:-ms-lang(x)::-ms-backdrop, #service .el_strongBox_list {
 @media screen and (max-width: 780px) {
   .el_modal_treeSP {
     display: block;
-    margin-top: 5px;
+    margin-top: 10px;
+    text-align: center;
   }
 }
 
@@ -2224,6 +2225,12 @@ _:-ms-lang(x)::-ms-backdrop, #service .el_strongBox_list {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .bl_footer_list {
+    justify-content: center;
+  }
+}
+
 .bl_footer_list:last-of-type {
   margin-top: 16px;
 }
@@ -2273,6 +2280,12 @@ _:-ms-lang(x)::-ms-backdrop, #service .el_strongBox_list {
   }
   .el_footer_banner img {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .el_footer_banner {
+    margin-top: 40px;
   }
 }
 
@@ -3374,7 +3387,7 @@ _:-ms-lang(x)::-ms-backdrop, .un_activety_textBox {
 
 @media screen and (max-width: 900px) {
   .un_activety_mainContainer {
-    flex-direction: column;
+    display: block;
   }
 }
 

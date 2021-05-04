@@ -68,7 +68,9 @@
 		padding: 160px 20px 40px 30px;
 	}
 	@media screen and (max-width: 780px) {
-		flex-direction: column;
+		// flex-direction: column;
+		// min-height: 0;
+		display: block;
 		padding: 80px 20px 40px 30px;
 		width: 100%;
 	}
@@ -132,7 +134,8 @@
 	}
 	@include maxmq(tab) {
 		display: block;
-		margin-top: 5px;
+		margin-top: 10px;
+		text-align: center;
 	}
 }
 

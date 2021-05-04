@@ -8,7 +8,9 @@
 	}
 	@include f_around(22.67 , 26.56 , 700 , false);
 	padding: 0 20px;
-
+	@media screen and (max-width: 1000px) {
+		justify-content: center;
+	}
 	&:last-of-type {
 		@include maxmq(tab) {
 			margin-top: 1em;
@@ -46,6 +48,9 @@
 		}
 	}
 	transition: opacity .2s;
+	@media screen and (max-width: 1000px) {
+		margin-top: 40px;
+	}
 
 	&:hover {
 		opacity: .8;

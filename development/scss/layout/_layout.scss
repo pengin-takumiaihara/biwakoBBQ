@@ -156,13 +156,13 @@
 // footer
 .ly_footer_wrapper {
 	display: flex;
-	@include maxmq(tab) {
-		flex-direction: column;
-	}
 	justify-content: space-between;
 	margin: 0 auto;
 	max-width: 1211px;
 	padding: 51px 20px;
+	@media screen and (max-width: 1000px) {
+		display: block;
+	}
 }
 
 // スクロールボタン
